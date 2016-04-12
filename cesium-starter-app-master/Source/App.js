@@ -1,3 +1,4 @@
+/*
 var viewer = new Cesium.Viewer('cesiumContainer', {
     imageryProvider: new Cesium.OpenStreetMapImageryProvider({
       url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
@@ -6,10 +7,11 @@ var viewer = new Cesium.Viewer('cesiumContainer', {
     baseLayerPicker: false
   });
   
-/*
+*/
+
 var geodata = 'Source/test.geojson';
 var promise = Cesium.GeoJsonDataSource.load(geodata);
-*/
+
 
 /*
 var kmldata = 'Source/test.kml';
@@ -29,8 +31,8 @@ promise.then(function(datasource){
     scene3DOnly: true,
     timeline: false,
     imageryProvider: new Cesium.OpenStreetMapImageryProvider({
-      url: '//cyberjapandata.gsi.go.jp/xyz/relief/'
-      //credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
+      url: '//cyberjapandata.gsi.go.jp/xyz/relief/',
+      credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
     }),
     terrainProvider: new Cesium.JapanGSITerrainProvider({
       heightPower: 1.0
