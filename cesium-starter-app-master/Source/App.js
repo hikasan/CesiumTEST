@@ -42,11 +42,11 @@ Polygon.add({
 
 
 /*
-var geodata = 'http://hikasan.github.io/CesiumTEST/cesium-starter-app-master/Source/test.geojson';
+var geodata = 'Source/test.geojson';
 var promise = Cesium.GeoJsonDataSource.load(geodata);
 */
 
-var kmldata = 'http://hikasan.github.io/CesiumTEST/cesium-starter-app-master/Source/test.kml';
+var kmldata = 'Source/test.kml';
 var promise = Cesium.KmlDataSource.load(kmldata);
 
 promise.then(function(datasource){
@@ -62,7 +62,7 @@ promise.then(function(datasource){
     timeline: false,
     imageryProvider: new Cesium.OpenStreetMapImageryProvider({
       url: '//cyberjapandata.gsi.go.jp/xyz/relief/'
-      credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
+      //credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
     }),
     terrainProvider: new Cesium.JapanGSITerrainProvider({
       heightPower: 1.0
