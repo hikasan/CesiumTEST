@@ -1,10 +1,51 @@
-var cesiumWidget = new Cesium.Viewer('cesiumContainer', {
+/*
+var viewer = new Cesium.Viewer('cesiumContainer', {
     imageryProvider: new Cesium.OpenStreetMapImageryProvider({
       url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
       credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
     }),
     baseLayerPicker: false
   });
-  cesiumWidget.dataDources.add(Cesium.KmlDataSource.load('D:\work\cesium-starter-app-master\Source\test.kml'));
-  cesiumWidget.scene.camera.setPositionCartographic(Cesium.Cartographic.fromDegrees(140.3531111111, 37.4365555558, 2000.0));
+  
+*/
 
+var geodata = 'http://hikasan.github.io/CesiumTEST/cesium-starter-app-master/Source/test.geojson';
+var promise = Cesium.GeoJsonDataSource.load(geodata);
+
+/*
+var kmldata = 'http://hikasan.github.io/CesiumTEST/cesium-starter-app-master/Source/test.kml';
+var promise = Cesium.KmlDataSource.load(kmldata);
+*/
+
+promise.then(function(datasource){
+  var viewer = new Cesium.Viewer('mapdiv', {
+    animation : false,
+    baseLayerPicker: false,
+    fullscreenButton: false,
+    geocoder: false,
+    homeButton: false,
+    navigationHelpButton: false,
+    sceneModePicker: false,
+    scene3DOnly: true,
+    timeline: false,
+    imageryProvider: new Cesium.OpenStreetMapImageryProvider({
+      url: '//cyberjapandata.gsi.go.jp/xyz/relief/',
+      credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
+    }),
+    terrainProvider: new Cesium.JapanGSITerrainProvider({
+      heightPower: 1.0
+    })
+  });
+
+  var layers = viewer.scene.imageryLayers;
+  var osm = layers.addImageryProvider(
+    new Cesium.OpenStreetMapImageryProvider()
+  );
+  osm.alpha = 0.6;
+
+  viewer.dataSources.add(datasource);
+  viewer.zoomTo(datasource);
+
+  var scene = viewer.scene;
+  viewer.scene.globe.depthTestAgainstTerrain = true;
+});
