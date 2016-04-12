@@ -39,7 +39,7 @@ Polygon.add({
   }
 });
 */
-var geodata = 'http://hikasan.github.io/CesiumTEST/cesium-starter-app-master/data/geodata_shelter.geojson';
+var geodata = 'http://hikasan.github.io/CesiumTEST/cesium-starter-app-master/Source/test.geojson';
 
 var promise = Cesium.GeoJsonDataSource.load(geodata);
 
