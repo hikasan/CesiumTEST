@@ -41,13 +41,15 @@ Polygon.add({
 */
 
 
-/*
+
 var geodata = 'Source/test.geojson';
 var promise = Cesium.GeoJsonDataSource.load(geodata);
-*/
 
+
+/*
 var kmldata = 'Source/test.kml';
 var promise = Cesium.KmlDataSource.load(kmldata);
+*/
 
 promise.then(function(datasource){
   var viewer = new Cesium.Viewer('mapdiv', {
