@@ -9,11 +9,11 @@ var viewer = new Cesium.Viewer('cesiumContainer', {
   
 */
 
-var geodata = '/Source/test.geojson';
+var geodata = 'http://hikasan.github.io/CesiumTEST/cesium-starter-app-master/Source/test.geojson';
 var promise = Cesium.GeoJsonDataSource.load(geodata);
 
 /*
-var kmldata = '/Source/test.kml';
+var kmldata = 'http://hikasan.github.io/CesiumTEST/cesium-starter-app-master/Source/test.kml';
 var promise = Cesium.KmlDataSource.load(kmldata);
 */
 
@@ -47,5 +47,5 @@ promise.then(function(datasource){
   viewer.zoomTo(datasource);
 
   var scene = viewer.scene;
-  viewer.scene.globe.depthTestAgainstTerrain = false;
+  viewer.scene.globe.depthTestAgainstTerrain = true;
 });
