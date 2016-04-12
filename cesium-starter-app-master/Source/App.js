@@ -40,14 +40,14 @@ Polygon.add({
 });
 */
 
-/*
+
 var geodata = 'http://hikasan.github.io/CesiumTEST/cesium-starter-app-master/Source/test.geojson';
 var promise = Cesium.GeoJsonDataSource.load(geodata);
-*/
 
+/*
 var kmldata = 'http://hikasan.github.io/CesiumTEST/cesium-starter-app-master/Source/test.kml';
 var promise = Cesium.KmlDataSource.load(kmldata);
-
+*/
 promise.then(function(datasource){
   var viewer = new Cesium.Viewer('mapdiv', {
     animation : false,
