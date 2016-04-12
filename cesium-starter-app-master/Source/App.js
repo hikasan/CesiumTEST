@@ -48,4 +48,5 @@ promise.then(function(datasource){
 
   var scene = viewer.scene;
   viewer.scene.globe.depthTestAgainstTerrain = false;
+  var cesiumWidget = viewer;
 });
