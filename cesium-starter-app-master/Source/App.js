@@ -59,7 +59,7 @@ promise.then(function(datasource){
       url: '//cyberjapandata.gsi.go.jp/xyz/relief/'
     }),
     terrainProvider: new Cesium.JapanGSITerrainProvider({
-      heightPower: 1000.0
+      heightPower: 1.0
     })
   });
 
