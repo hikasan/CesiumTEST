@@ -1,4 +1,4 @@
-﻿
+﻿/*
 var viewer = new Cesium.Viewer('cesiumContainer', {
     imageryProvider: new Cesium.OpenStreetMapImageryProvider({
       url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
@@ -7,13 +7,13 @@ var viewer = new Cesium.Viewer('cesiumContainer', {
     baseLayerPicker: false
   });
   
+*/
 
-
-var geodata = 'Source/test.geojson';
+var geodata = '/Source/test.geojson';
 var promise = Cesium.GeoJsonDataSource.load(geodata);
 
 /*
-var kmldata = 'Source/test.kml';
+var kmldata = '/Source/test.kml';
 var promise = Cesium.KmlDataSource.load(kmldata);
 */
 
