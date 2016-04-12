@@ -1,3 +1,4 @@
+/*
 var viewer = new Cesium.Viewer('cesiumContainer', {
   imageryProvider: new Cesium.OpenStreetMapImageryProvider({
     url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
@@ -6,19 +7,9 @@ var viewer = new Cesium.Viewer('cesiumContainer', {
   baseLayerPicker: false
 }); 
 viewer.dataSources.add(Cesium.KmlDataSource.load('file://D:/work\cesium-starter-app-master/Source/test.kml'))
-/*
-var cesiumWidget = new Cesium.Viewer('cesiumContainer', {
-    imageryProvider: new Cesium.OpenStreetMapImageryProvider({
-      url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
-      credit: new Cesium.Credit('ínóùâ@É^ÉCÉã', '', 'http://maps.gsi.go.jp/development/ichiran.html')
-    }),
-    baseLayerPicker: false
-  });
-*/
 
 //add point
 var point = viewer.entities;
-//var point = cesiumWidget.entities;
 point.add({
   position : Cesium.Cartesian3.fromDegress(38.938605,141.1048496),
   point : {
@@ -29,7 +20,6 @@ point.add({
 
 //add a line
 var line1 = viewer.entities;
-//var line1 = cesiumWidget.entities;
 line1.add({
   name : 'Red line on the surface',
   polyline : {
@@ -40,7 +30,6 @@ line1.add({
 });
 //add polygon
 var Polygon = viewer.entities;
-//var Polygon = cesiumWidget.entities;
 Polygon.add({
   name : 'Polygon',
   polygon : {
@@ -49,7 +38,38 @@ Polygon.add({
     material : Cesium.Color.GREEN
   }
 });
-//viewer.camera.flyTo({ destination : Cesium.Cartesian3.fromDegrees(139.76,35.67, 15000.0)});
+*/
+var geodata = 'Source/test.geojson';
 
-//viewer.scene.globe.depthTestAgainstTerrain: false;
+var promise = Cesium.GeoJsonDataSource.load(geodata);
+
+
+promise.then(function(datasource){
+  var viewer = new Cesium.Viewer('mapdiv', {
+    animation : false,
+    baseLayerPicker: false,
+    fullscreenButton: false,
+    geocoder: false,
+    homeButton: false,
+    navigationHelpButton: false,
+    sceneModePicker: false,
+    scene3DOnly: true,
+    timeline: false,
+    imageryProvider: new Cesium.OpenStreetMapImageryProvider({
+      url: '//cyberjapandata.gsi.go.jp/xyz/relief/'
+    }),
+    terrainProvider: new Cesium.JapanGSITerrainProvider({
+      heightPower: 1000.0
+    })
+  });
+
+  var layers = viewer.scene.imageryLayers;
+  var osm = layers.addImageryProvider(
+    new Cesium.OpenStreetMapImageryProvider()
+  );
+  osm.alpha = 0.6;
+
+  viewer.dataSources.add(datasource);
+  viewer.zoomTo(datasource);
+});
 

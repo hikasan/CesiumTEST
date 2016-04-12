@@ -19,6 +19,9 @@
 <Style id="default_pnt">
  <IconStyle>
   <color>80aaccff</color>
+  <Icon>
+   <href>http://cyberjapan.jp/symbols/080.bmp</href>
+  </Icon>
  </IconStyle>
 </Style>
  <Style id="Pol-ff00af4f">
@@ -54,7 +57,7 @@
   <open>1</open>
   <Folder>
    <description></description>
-   <name>測定結果_道路:Mesh</name>
+   <name>kekkaMesh</name>
    <visibility>1</visibility>
    <open>1</open>
     <Placemark>
