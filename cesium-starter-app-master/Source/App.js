@@ -41,7 +41,10 @@ Polygon.add({
 */
 
 
+/*
 var geodata = 'http://hikasan.github.io/CesiumTEST/cesium-starter-app-master/Source/test.geojson';
+*/
+var geodata = '/Source/test.geojson';
 var promise = Cesium.GeoJsonDataSource.load(geodata);
 
 /*
