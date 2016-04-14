@@ -1,12 +1,10 @@
-﻿
-var viewer = new Cesium.Viewer('cesiumContainer', {
-    imageryProvider: new Cesium.OpenStreetMapImageryProvider({
-      url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
-      credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
-    }),
-    baseLayerPicker: false
-  });
-  
+﻿var viewer = new Cesium.Viewer('cesiumContainer');
+viewer.dataSources.add(Cesium.GeoJsonDataSource.load('../../Source/test.geojson', {
+  stroke: Cesium.Color.HOTPINK,
+  fill: Cesium.Color.PINK,
+  strokeWidth: 3,
+  markerSymbol: '?'
+}));
 
 /*
 var geodata = 'http://hikasan.github.io/CesiumTEST/cesium-starter-app-master/Source/test.kml';
