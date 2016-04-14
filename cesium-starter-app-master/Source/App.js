@@ -12,10 +12,10 @@ var viewer = new Cesium.Viewer('cesiumContainer', {
 var geodata = 'http://hikasan.github.io/CesiumTEST/cesium-starter-app-master/Source/test.kml';
 var promise = Cesium.KmlDataSource.load(geodata);
 */
-/*
-var geodata = 'http://hikasan.github.io/CesiumTEST/cesium-starter-app-master/Source/test.geojson';
+
+var geodata = '/Source/test.geojson';
 var promise = Cesium.GeoJsonDataSource.load(geodata);
-*/
+
 
 promise.then(function(datasource){
   var viewer = new Cesium.Viewer('mapdiv', {
