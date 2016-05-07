@@ -5,7 +5,7 @@
     }),
     baseLayerPicker: false
   });
-/*
+
 Cesium.Math.setRandomNumberSeed(0);
 
 var promise = Cesium.GeoJsonDataSource.load('/Source/test.geojson');
@@ -32,4 +32,4 @@ promise.then(function(dataSource) {
         entity.polygon.extrudedHeight = entity.properties.AveragevValue * 100000.0;
     }
 });
-*/
+
