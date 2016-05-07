@@ -11,7 +11,6 @@ Cesium.Math.setRandomNumberSeed(0);
 var promise = Cesium.GeoJsonDataSource.load('/Source/test.geojson');
 promise.then(function(dataSource) {
     cesiumWidget.dataSources.add(dataSource);
-window.alert("TET");
 
     var entities = dataSource.entities.values;
     
@@ -32,5 +31,7 @@ window.alert("TET");
 
         entity.polygon.extrudedHeight = entity.properties.AveragevValue * 100000.0;
     }
+}).otherwise(function(error){
+    window.alert(error);
 });
 
