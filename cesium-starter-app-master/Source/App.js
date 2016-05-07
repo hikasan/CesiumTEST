@@ -1,20 +1,35 @@
-﻿var viewer = new Cesium.Viewer('cesiumContainer');
-//Example 1: Load with default styling.
-Sandcastle.addDefaultToolbarButton('Default styling', function() {
+﻿var viewer = new Cesium.Viewer('mapdiv', {
+    animation : false,
+    baseLayerPicker: false,
+    fullscreenButton: false,
+    geocoder: false,
+    homeButton: false,
+    navigationHelpButton: false,
+    sceneModePicker: false,
+    scene3DOnly: true,
+    timeline: false,
+    imageryProvider: new Cesium.OpenStreetMapImageryProvider({
+      url: '//cyberjapandata.gsi.go.jp/xyz/relief/'
+    }),
+    terrainProvider: new Cesium.JapanGSITerrainProvider({
+      heightPower: 1.0
+    });
+
+/*
+addDefaultToolbarButton('Default styling', function() {
     viewer.dataSources.add(Cesium.GeoJsonDataSource.load('/Source/test.geojson'));
 });
 
-//Example 2: Load with basic styling options.
-Sandcastle.addToolbarButton('Basic styling', function() {
+addToolbarButton('Basic styling', function() {
     viewer.dataSources.add(Cesium.GeoJsonDataSource.load('/Source/test.geojson', {
         stroke: Cesium.Color.HOTPINK,
         fill: Cesium.Color.PINK.withAlpha(0.5),
         strokeWidth: 3
     }));
 });
+*/
 
-//Example 3: Apply custom graphics after load.
-Sandcastle.addToolbarButton('Custom styling', function() {
+//addToolbarButton('Custom styling', function() {
     //Seed the random number generator for repeatable results.
     Cesium.Math.setRandomNumberSeed(0);
 
@@ -54,17 +69,19 @@ Sandcastle.addToolbarButton('Custom styling', function() {
         //Display any errrors encountered while loading.
         window.alert(error);
     });
-});
+//});
+viewer.camera.lookAt(Cesium.Cartesian3.fromDegrees(-98.0, 40.0), new Cesium.Cartesian3(0.0, -4790000.0, 3930000.0));
+viewer.camera.lookAtTransform(Cesium.Matrix4.IDENTITY);
 
-//Reset the scene when switching demos.
+
+/*
 Sandcastle.reset = function() {
   viewer.dataSources.removeAll();
   
-  //Set the camera to a US centered tilted view and switch back to moving in world coordinates.
   viewer.camera.lookAt(Cesium.Cartesian3.fromDegrees(-98.0, 40.0), new Cesium.Cartesian3(0.0, -4790000.0, 3930000.0));
   viewer.camera.lookAtTransform(Cesium.Matrix4.IDENTITY);
 };
-
+*/
 
 /*
 var geodata = 'http://hikasan.github.io/CesiumTEST/cesium-starter-app-master/Source/test.kml';
