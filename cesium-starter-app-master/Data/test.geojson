@@ -112,7 +112,9 @@
       "properties": {
         "stroke": "#9e1b0c",
         "stroke-width": 2,
-        "stroke-opacity": 1
+        "stroke-opacity": 1,
+        "AverageValue": 0.3,
+        "CityName": ""
       },
       "geometry": {
         "type": "LineString",
