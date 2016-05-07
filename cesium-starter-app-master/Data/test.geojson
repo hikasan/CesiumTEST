@@ -109,7 +109,10 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "AverageValue": 0.0,
+        "CityName": ""
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [
