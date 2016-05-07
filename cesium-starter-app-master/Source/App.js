@@ -1,11 +1,12 @@
-﻿//Example 1: Load with default styling.
+﻿var viewer = new Cesium.Viewer('cesiumContainer');
+//Example 1: Load with default styling.
 Sandcastle.addDefaultToolbarButton('Default styling', function() {
-    viewer.dataSources.add(Cesium.GeoJsonDataSource.load('/test.geojson'));
+    viewer.dataSources.add(Cesium.GeoJsonDataSource.load('/Source/test.geojson'));
 });
 
 //Example 2: Load with basic styling options.
 Sandcastle.addToolbarButton('Basic styling', function() {
-    viewer.dataSources.add(Cesium.GeoJsonDataSource.load('/test.geojson', {
+    viewer.dataSources.add(Cesium.GeoJsonDataSource.load('/Source/test.geojson', {
         stroke: Cesium.Color.HOTPINK,
         fill: Cesium.Color.PINK.withAlpha(0.5),
         strokeWidth: 3
@@ -17,7 +18,7 @@ Sandcastle.addToolbarButton('Custom styling', function() {
     //Seed the random number generator for repeatable results.
     Cesium.Math.setRandomNumberSeed(0);
 
-    var promise = Cesium.GeoJsonDataSource.load('/test.geojson');
+    var promise = Cesium.GeoJsonDataSource.load('/Source/test.geojson');
     promise.then(function(dataSource) {
         viewer.dataSources.add(dataSource);
 
