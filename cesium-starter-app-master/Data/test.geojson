@@ -3,8 +3,10 @@
   "features": [
     {
       "type": "Feature",
-      "properties": {"AveragevValue": 0.1,
-                     "CityName": "大河原町"},
+      "properties": {
+        "AveragevValue": 0.1,
+        "CityName": "大河原町"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -35,8 +37,10 @@
     },
     {
       "type": "Feature",
-      "properties": {"AveragevValue": "0.2",
-                     "CityName": "丸森町"},
+      "properties": {
+        "AveragevValue": "0.2",
+        "CityName": "丸森町"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -61,6 +65,35 @@
               140.69778442382812,
               37.90194871393947
             ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            140.6711769104004,
+            37.89910417381559
+          ],
+          [
+            140.73074340820312,
+            37.868484546425755
+          ],
+          [
+            140.76232910156247,
+            37.884608857503814
+          ],
+          [
+            140.7849884033203,
+            37.885286272298096
+          ],
+          [
+            140.7930564880371,
+            37.865638713387156
           ]
         ]
       }
