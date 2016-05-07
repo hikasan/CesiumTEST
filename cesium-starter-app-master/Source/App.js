@@ -8,7 +8,7 @@
 
 Cesium.Math.setRandomNumberSeed(0);
 
-var promise = Cesium.GeoJsonDataSource.load('http://hikasan.github.io/CesiumTEST/cesium-starter-app-master/Source/test.geojson');
+var promise = Cesium.GeoJsonDataSource.load('../Data/test.geojson');
 promise.then(function(dataSource) {
     cesiumWidget.dataSources.add(dataSource);
 
