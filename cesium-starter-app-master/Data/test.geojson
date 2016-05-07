@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "AveragevValue": 0.1,
+        "AverageValue": 0.1,
         "CityName": "大河原町"
       },
       "geometry": {
@@ -38,7 +38,7 @@
     {
       "type": "Feature",
       "properties": {
-        "AveragevValue": "0.2",
+        "AverageValue": "0.2",
         "CityName": "丸森町"
       },
       "geometry": {
