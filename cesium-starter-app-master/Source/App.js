@@ -29,8 +29,10 @@ promise.then(function(dataSource) {
         if (entity.geometry.type == "Polygon" ) {
 	        entity.polygon.material = color;
 	        entity.polygon.outline = false;
-
 	        entity.polygon.extrudedHeight = entity.properties.AverageValue * 10000.0;
+        }
+        if (entity.geometry.type == "LineString" ) {
+	        entity.polygon.linestring = color;
         }
     }
 }).otherwise(function(error){
