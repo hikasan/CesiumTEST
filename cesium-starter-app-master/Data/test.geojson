@@ -71,7 +71,10 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "AveragevValue": "0.2",
+        "CityName": "test"
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [
