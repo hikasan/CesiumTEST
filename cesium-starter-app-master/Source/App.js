@@ -31,6 +31,4 @@ promise.then(function(dataSource) {
 
         entity.polygon.extrudedHeight = entity.properties.AveragevValue * 100000.0;
     }
-}).otherwise(function(error){
-    window.alert(error);
 });
