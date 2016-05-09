@@ -53,6 +53,8 @@ promise.then(function(dataSource) {
 var skyAtmosphere = cesiumWidget.scene.skyAtmosphere;
 var skyCheckbox = document.getElementById('skyCheckbox');
 
+/*
 skyCheckbox.addEventListener('change', function() {
   cesiumWidget.scene.skyAtmosphere = skyCheckbox.checked ? skyAtmosphere : undefined;
 }, false);
+*/
