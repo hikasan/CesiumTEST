@@ -44,7 +44,7 @@
 	    mapProjection: new Cesium.WebMercatorProjection(Cesium.Ellipsoid.WGS84)
 	});
 	var scene = cesiumWidget.scene;
-	scene.globe.depthTestAgainstTerrain = true;
+	//scene.globe.depthTestAgainstTerrain = true;
 	scene.camera.lookAt(camera_start, camera_direction, Cesium.Cartesian3.UNIT_Z);
 
 
