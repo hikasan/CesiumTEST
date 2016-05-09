@@ -44,7 +44,7 @@ promise.then(function(dataSource) {
 	        //entity.billboard.scale = 2.0;
         }
     }
-    cesiumWidget.zoomTo(datasource);
+    //cesiumWidget.zoomTo(datasource);
     
 }).otherwise(function(error){
     window.alert(error);
