@@ -36,9 +36,8 @@ promise.then(function(dataSource) {
         }
         if (entity.point != null) {
 	        entity.point.Color = color;
-	        entity.billboard.image = './Images/Iplus.png';
+	        entity.billboard.image = './Images/Iplus.gif';
 	        entity.billboard.scale = 2.0;
-	        //entity.corridor.extrudedHeight = entity.properties.AverageValue * 10000.0;
         }
     }
 }).otherwise(function(error){
