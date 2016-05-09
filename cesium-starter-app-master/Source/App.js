@@ -53,7 +53,7 @@ var hakone = './Data/test.geojson';
 var promise = Cesium.GeoJsonDataSource.load(hakone);
 
 promise.then(function(datasource){
-  var viewer = new Cesium.Viewer('mapdiv', {
+  var cesiumWidget = new Cesium.Viewer('mapdiv', {
     animation : false,
     baseLayerPicker: false,
     fullscreenButton: false,
@@ -71,13 +71,13 @@ promise.then(function(datasource){
     })
   });
 
-  var layers = viewer.scene.imageryLayers;
+  var layers = cesiumWidget.scene.imageryLayers;
   var osm = layers.addImageryProvider(
     new Cesium.OpenStreetMapImageryProvider()
   );
   osm.alpha = 0.6;
 
-  viewer.dataSources.add(datasource);
-  viewer.zoomTo(datasource);
+  cesiumWidget.dataSources.add(datasource);
+  cesiumWidget.zoomTo(datasource);
 });
 
