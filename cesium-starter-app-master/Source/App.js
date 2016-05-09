@@ -36,7 +36,7 @@ promise.then(function(dataSource) {
         }
         if (entity.point != null) {
 	        //entity.point.Color = color;
-	        entity.billboard.image = './Images/Iplus.png';
+	        //entity.billboard.image = './Images/Iplus.png';
 	        entity.point.pixelSize = 10;
             entity.point.color = Cesium.Color.YELLOW;
 
