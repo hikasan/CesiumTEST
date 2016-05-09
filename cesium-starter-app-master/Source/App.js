@@ -25,10 +25,15 @@ promise.then(function(dataSource) {
             });
             colorHash[name] = color;
         }
-        
-        entity.polygon.material = color;
-        entity.polygon.outline = false;
-        entity.polygon.extrudedHeight = entity.properties.AverageValue * 10000.0;
+        if (entity.polygon != null) {
+	        entity.polygon.material = color;
+	        entity.polygon.outline = false;
+	        entity.polygon.extrudedHeight = entity.properties.AverageValue * 10000.0;
+        }
+        if (entity.corridor != null) {
+	        entity.corridor.outlineColor = color;
+	        //entity.corridor.extrudedHeight = entity.properties.AverageValue * 10000.0;
+        }
     }
 }).otherwise(function(error){
     window.alert(error);
