@@ -47,11 +47,11 @@ promise.then(function(dataSource) {
     cesiumWidget.zoomTo(datasource);
 	var skyAtmosphere = cesiumWidget.scene.skyAtmosphere;
 	var skyCheckbox = document.getElementById('skyCheckbox');
-
-	skyCheckbox.addEventListener('change', function() {
-	  cesiumWidget.scene.skyAtmosphere = skyCheckbox.checked ? skyAtmosphere : undefined;
-	}, false);
     
 }).otherwise(function(error){
     window.alert(error);
 });
+
+skyCheckbox.addEventListener('change', function() {
+  cesiumWidget.scene.skyAtmosphere = skyCheckbox.checked ? skyAtmosphere : undefined;
+}, false);
