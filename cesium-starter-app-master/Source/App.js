@@ -45,6 +45,6 @@
 	});
 	var scene = cesiumWidget.scene;
 	//scene.globe.depthTestAgainstTerrain = true;
-	scene.camera.lookAt(camera_start, camera_direction, Cesium.Cartesian3.UNIT_Z);
+	//scene.camera.lookAt(camera_start, camera_direction, Cesium.Cartesian3.UNIT_Z);
 
 
