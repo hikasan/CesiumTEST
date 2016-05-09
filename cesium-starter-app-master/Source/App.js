@@ -1,5 +1,5 @@
-﻿	//var camera_start = Cesium.Cartesian3.fromDegrees(139.45, 35.41, 1000);
-	//var camera_direction = Cesium.Cartesian3.fromDegrees(-75.0, 70.0, 0);
+﻿	var camera_start = Cesium.Cartesian3.fromDegrees(139.45, 35.41, 1000);
+	var camera_direction = Cesium.Cartesian3.fromDegrees(-75.0, 70.0, 0);
 	var hakone = './Data/test.geojson';
 
 	var promise = Cesium.GeoJsonDataSource.load(hakone);
@@ -45,6 +45,6 @@
 	});
 	var scene = cesiumWidget.scene;
 	scene.globe.depthTestAgainstTerrain = true;
-	//scene.camera.lookAt(camera_start, camera_direction, Cesium.Cartesian3.UNIT_Z);
+	scene.camera.lookAt(camera_start, camera_direction, Cesium.Cartesian3.UNIT_Z);
 
 
