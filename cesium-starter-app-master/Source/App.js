@@ -34,6 +34,10 @@ promise.then(function(dataSource) {
 	        entity.corridor.outlineColor = color;
 	        //entity.corridor.extrudedHeight = entity.properties.AverageValue * 10000.0;
         }
+        if (entity.point != null) {
+	        entity.point.Color = color;
+	        //entity.corridor.extrudedHeight = entity.properties.AverageValue * 10000.0;
+        }
     }
 }).otherwise(function(error){
     window.alert(error);

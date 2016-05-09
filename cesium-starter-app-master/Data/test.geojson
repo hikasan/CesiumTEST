@@ -135,6 +135,19 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "CityName": "角田市"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.77237129211426,
+          37.97918331477581
+        ]
+      }
     }
   ]
 }
