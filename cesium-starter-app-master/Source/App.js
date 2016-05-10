@@ -67,14 +67,14 @@
     window.alert(error);
   });
 */
-/*
+
 	var camera_start = Cesium.Cartesian3.fromDegrees(139.45, 35.41, 1000);
 	var camera_direction = Cesium.Cartesian3.fromDegrees(-75.0, 70.0, 0);
 	var testdata = './Data/hakone_shelter.geojson';
 
 	var promise = Cesium.GeoJsonDataSource.load(testdata);
 
-	  var cesiumWidget = new Cesium.Viewer('mapdiv', {
+	  var viewer = new Cesium.Viewer('mapdiv', {
 //	    animation : false,
 //	    baseLayerPicker: false,
 //	    fullscreenButton: false,
@@ -93,8 +93,8 @@
 	  });
 
 	promise.then(function(datasource){
-	  cesiumWidget.dataSources.add(datasource);
-	  cesiumWidget.zoomTo(datasource);
+	  viewer.dataSources.add(datasource);
+	  viewer.zoomTo(datasource);
 
 	  var layers = viewer.scene.imageryLayers;
 	  var osm = layers.addImageryProvider(
@@ -120,8 +120,9 @@
 	var scene = cesiumWidget.scene;
 	//scene.globe.depthTestAgainstTerrain = true;
 	//scene.camera.lookAt(camera_start, camera_direction, Cesium.Cartesian3.UNIT_Z);
-*/
 
+
+/*
 var hakone = './Data/hakone_shelter.geojson';
 
 var promise = Cesium.GeoJsonDataSource.load(hakone);
@@ -154,3 +155,4 @@ promise.then(function(datasource){
   cesiumWidget.dataSources.add(datasource);
   cesiumWidget.zoomTo(datasource);
 });
+*/
