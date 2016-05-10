@@ -1,24 +1,24 @@
 ﻿/*
-    var testdata = './Data/test.geojson';
+//    var testdata = './Data/test.geojson';
 
-    var cesiumWidget = new Cesium.Viewer('cesiumContainer', {
-      imageryProvider: new Cesium.OpenStreetMapImageryProvider({
-        url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
-        credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
-      }),
-      baseLayerPicker: false
-    });
+//    var cesiumWidget = new Cesium.Viewer('cesiumContainer', {
+//      imageryProvider: new Cesium.OpenStreetMapImageryProvider({
+//        url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
+//        credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
+//      }),
+//      baseLayerPicker: false
+//    });
 
-    var promise = Cesium.GeoJsonDataSource.load(testdata);
+//    var promise = Cesium.GeoJsonDataSource.load(testdata);
 
-    promise.then(function(datasource){
-      cesiumWidget.dataSources.add(datasource);
-      var scene = cesiumWidget.scene;
-      //scene.globe.depthTestAgainstTerrain = true;
-      cesiumWidget.zoomTo(datasource);
-    }).otherwise(function(error){
-        window.alert(error);
-    });
+//    promise.then(function(datasource){
+//      cesiumWidget.dataSources.add(datasource);
+//      var scene = cesiumWidget.scene;
+//      //scene.globe.depthTestAgainstTerrain = true;
+//      cesiumWidget.zoomTo(datasource);
+//    }).otherwise(function(error){
+//        window.alert(error);
+//    });
 */
   var viewer = new Cesium.Viewer('mapdiv', {
 //	    animation : false,
@@ -53,6 +53,7 @@
     mapProjection: new Cesium.WebMercatorProjection(Cesium.Ellipsoid.WGS84)
   });
 
+/*
   var testdata = './Data/test.geojson';
   var promise = Cesium.GeoJsonDataSource.load(testdata);
   promise.then(function(datasource){
@@ -65,4 +66,4 @@
   }).otherwise(function(error){
     window.alert(error);
   });
-
+*/
