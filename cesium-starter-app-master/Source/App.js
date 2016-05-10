@@ -58,6 +58,7 @@
   promise.then(function(datasource){
     var scene = cesiumWidget.scene;
     //scene.globe.depthTestAgainstTerrain = true;
+    window.alert("tete");
 
     cesiumWidget.dataSources.add(datasource);
     cesiumWidget.zoomTo(datasource);
