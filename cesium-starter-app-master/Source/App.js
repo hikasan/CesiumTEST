@@ -115,7 +115,7 @@
 //  promise.then(function(datasource){
 //  Viewer.dataSources.add(datasource);
 //  Viewer.zoomTo(datasource);
-    });
+//    });
 
 	var scene = cesiumWidget.scene;
 	//scene.globe.depthTestAgainstTerrain = true;
