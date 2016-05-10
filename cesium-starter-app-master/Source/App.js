@@ -1,10 +1,12 @@
-﻿var Button1 = document.getElementById('Button1');
+﻿var cesiumWidget = new Cesium.Viewer('cesiumContainer');
+
+var Button1 = document.getElementById('Button1');
 Button1.addEventListener('click', function(){
     var camera_start = Cesium.Cartesian3.fromDegrees(139.45, 35.41, 1000);
     var camera_direction = Cesium.Cartesian3.fromDegrees(-75.0, 70.0, 0);
     var testdata = './Data/test.geojson';
 
-    var cesiumWidget = new Cesium.Viewer('cesiumContainer', {
+    cesiumWidget = new Cesium.Viewer('cesiumContainer', {
       imageryProvider: new Cesium.OpenStreetMapImageryProvider({
         url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
         credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
@@ -59,7 +61,7 @@ Button2.addEventListener('click', function(){
       );
       osm.alpha = 0.6;
 
-      var cesiumWidget = new Cesium.Viewer('cesiumContainer', {
+      cesiumWidget = new Cesium.Viewer('cesiumContainer', {
           imageryProvider: new Cesium.JapanGSIImageryProvider({
               layerLists: ["ort","relief","std"]
           }),
