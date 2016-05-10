@@ -10,6 +10,8 @@
 	var testdata = './Data/test.geojson';
 	var promise = Cesium.GeoJsonDataSource.load(testdata);
 	
+Cesium.Math.setRandomNumberSeed(0);
+	
   promise.then(function(datasource){
     cesiumWidget.dataSources.add(datasource);
     cesiumWidget.zoomTo(datasource);
