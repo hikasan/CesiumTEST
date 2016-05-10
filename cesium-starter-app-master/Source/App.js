@@ -103,7 +103,6 @@
 	  osm.alpha = 0.6;
 	});
 
-/*
 	var cesiumWidget = new Cesium.Viewer('cesiumContainer', {
 	    imageryProvider: new Cesium.JapanGSIImageryProvider({
 	        layerLists: ["ort","relief","std"]
@@ -117,9 +116,41 @@
 	  viewer.dataSources.add(datasource);
 	  viewer.zoomTo(datasource);
     });
-*/
 
 	var scene = cesiumWidget.scene;
 	//scene.globe.depthTestAgainstTerrain = true;
 	//scene.camera.lookAt(camera_start, camera_direction, Cesium.Cartesian3.UNIT_Z);
 */
+
+var hakone = './Data/hakone_shelter.geojson';
+
+var promise = Cesium.GeoJsonDataSource.load(hakone);
+
+promise.then(function(datasource){
+  var viewer = new Cesium.Viewer('mapdiv', {
+    animation : false,
+    baseLayerPicker: false,
+    fullscreenButton: false,
+    geocoder: false,
+    homeButton: false,
+    navigationHelpButton: false,
+    sceneModePicker: false,
+    scene3DOnly: true,
+    timeline: false,
+    imageryProvider: new Cesium.OpenStreetMapImageryProvider({
+      url: '//cyberjapandata.gsi.go.jp/xyz/relief/'
+    }),
+    terrainProvider: new Cesium.JapanGSITerrainProvider({
+      heightPower: 1.0
+    })
+  });
+
+  var layers = viewer.scene.imageryLayers;
+  var osm = layers.addImageryProvider(
+    new Cesium.OpenStreetMapImageryProvider()
+  );
+  osm.alpha = 0.6;
+
+  viewer.dataSources.add(datasource);
+  viewer.zoomTo(datasource);
+});
