@@ -1,4 +1,5 @@
-﻿    var testdata = './Data/test.geojson';
+﻿/*
+    var testdata = './Data/test.geojson';
 
     var cesiumWidget = new Cesium.Viewer('cesiumContainer', {
       imageryProvider: new Cesium.OpenStreetMapImageryProvider({
@@ -18,10 +19,7 @@
     }).otherwise(function(error){
         window.alert(error);
     });
-//  else
-/*
-	var camera_start = Cesium.Cartesian3.fromDegrees(139.45, 35.41, 1000);
-	var camera_direction = Cesium.Cartesian3.fromDegrees(-75.0, 70.0, 0);
+*/
 	var testdata = './Data/test.geojson';
 
 	var promise = Cesium.GeoJsonDataSource.load(testdata);
@@ -62,11 +60,10 @@
       });
       var scene = cesiumWidget.scene;
       //scene.globe.depthTestAgainstTerrain = true;
-      //scene.camera.lookAt(camera_start, camera_direction, Cesium.Cartesian3.UNIT_Z);
 
       cesiumWidget.dataSources.add(datasource);
       cesiumWidget.zoomTo(datasource);
-*/
-//  }
-//}, false);
+    }).otherwise(function(error){
+        window.alert(error);
+    });
 
