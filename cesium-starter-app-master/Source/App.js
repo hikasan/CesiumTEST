@@ -1,7 +1,7 @@
-﻿var skyCheckbox = document.getElementById('skyCheckbox');
+﻿//var skyCheckbox = document.getElementById('skyCheckbox');
 
-skyCheckbox.addEventListener('change', function() {
-  if((skyCheckbox.checked ? skyAtmosphere : undefined) != null ){
+//skyCheckbox.addEventListener('change', function() {
+//  if((skyCheckbox.checked ? skyAtmosphere : undefined) != null ){
     var camera_start = Cesium.Cartesian3.fromDegrees(139.45, 35.41, 1000);
     var camera_direction = Cesium.Cartesian3.fromDegrees(-75.0, 70.0, 0);
     var testdata = './Data/test.geojson';
@@ -25,7 +25,8 @@ skyCheckbox.addEventListener('change', function() {
     }).otherwise(function(error){
         window.alert(error);
     });
-  else
+//  else
+/*
 	var camera_start = Cesium.Cartesian3.fromDegrees(139.45, 35.41, 1000);
 	var camera_direction = Cesium.Cartesian3.fromDegrees(-75.0, 70.0, 0);
 	var testdata = './Data/test.geojson';
@@ -72,6 +73,7 @@ skyCheckbox.addEventListener('change', function() {
 
       cesiumWidget.dataSources.add(datasource);
       cesiumWidget.zoomTo(datasource);
-  }
-}, false);
+*/
+//  }
+//}, false);
 
