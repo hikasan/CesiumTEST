@@ -1,4 +1,5 @@
 ﻿var cesiumWidget = new Cesium.Viewer('cesiumContainer');
+alert("xxxx");
 
 //var Button1 = document.getElementById('Button1');
 //Button1.addEventListener('click', function(){
@@ -57,6 +58,7 @@ function 処理1() {
 //var Button2 = document.getElementById('Button2');
 //Button2.addEventListener('click', function(){
 function 処理2() {
+    alert("Button2");
 	var camera_start = Cesium.Cartesian3.fromDegrees(139.45, 35.41, 1000);
 	var camera_direction = Cesium.Cartesian3.fromDegrees(-75.0, 70.0, 0);
 	var testdata = './Data/test.geojson';
@@ -103,7 +105,6 @@ function 処理2() {
 
 	  cesiumWidget.dataSources.add(datasource);
 	  cesiumWidget.zoomTo(datasource);
-    alert("Button2");
 }
 //	});
 //}, false);
