@@ -74,9 +74,7 @@
 
 	var promise = Cesium.GeoJsonDataSource.load(testdata);
 
-/*
-	promise.then(function(datasource){
-	  var viewer = new Cesium.Viewer('mapdiv', {
+	  var cesiumWidget = new Cesium.Viewer('mapdiv', {
 //	    animation : false,
 //	    baseLayerPicker: false,
 //	    fullscreenButton: false,
@@ -94,8 +92,9 @@
 	    })
 	  });
 
-	  viewer.dataSources.add(datasource);
-	  viewer.zoomTo(datasource);
+	promise.then(function(datasource){
+	  cesiumWidget.dataSources.add(datasource);
+	  cesiumWidget.zoomTo(datasource);
 
 	  var layers = viewer.scene.imageryLayers;
 	  var osm = layers.addImageryProvider(
@@ -103,8 +102,8 @@
 	  );
 	  osm.alpha = 0.6;
 	});
-*/
 
+/*
 	var cesiumWidget = new Cesium.Viewer('cesiumContainer', {
 	    imageryProvider: new Cesium.JapanGSIImageryProvider({
 	        layerLists: ["ort","relief","std"]
@@ -118,6 +117,7 @@
 	  viewer.dataSources.add(datasource);
 	  viewer.zoomTo(datasource);
     });
+*/
 
 	var scene = cesiumWidget.scene;
 	//scene.globe.depthTestAgainstTerrain = true;
