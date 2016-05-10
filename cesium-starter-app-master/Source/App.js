@@ -13,8 +13,6 @@
 Cesium.Math.setRandomNumberSeed(0);
 	
   promise.then(function(datasource){
-    cesiumWidget.dataSources.add(datasource);
-    cesiumWidget.zoomTo(datasource);
     
     var entities = datasource.entities.values;
     
@@ -47,4 +45,8 @@ Cesium.Math.setRandomNumberSeed(0);
 	        //entity.billboard.scale = 2.0;
         }
     }
+
+    cesiumWidget.dataSources.add(datasource);
+    cesiumWidget.zoomTo(datasource);
+
   });
