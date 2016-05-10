@@ -1,4 +1,6 @@
-﻿skyCheckbox.addEventListener('change', function() {
+﻿var skyCheckbox = document.getElementById('skyCheckbox');
+
+skyCheckbox.addEventListener('change', function() {
   if((skyCheckbox.checked ? skyAtmosphere : undefined) != null ){
     var camera_start = Cesium.Cartesian3.fromDegrees(139.45, 35.41, 1000);
     var camera_direction = Cesium.Cartesian3.fromDegrees(-75.0, 70.0, 0);
