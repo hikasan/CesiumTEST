@@ -47,4 +47,4 @@ Cesium.Math.setRandomNumberSeed(0);
 	        //entity.billboard.scale = 2.0;
         }
     }
-});
+  });
