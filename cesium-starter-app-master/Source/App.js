@@ -16,7 +16,7 @@ Cesium.Math.setRandomNumberSeed(0);
     cesiumWidget.dataSources.add(datasource);
     cesiumWidget.zoomTo(datasource);
     
-    var entities = dataSource.entities.values;
+    var entities = datasource.entities.values;
     
     var colorHash = {};
     for (var i = 0; i < entities.length; i++) {
