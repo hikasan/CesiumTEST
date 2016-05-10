@@ -74,6 +74,7 @@
 
 	var promise = Cesium.GeoJsonDataSource.load(testdata);
 
+/*
 	promise.then(function(datasource){
 	  var viewer = new Cesium.Viewer('mapdiv', {
 //	    animation : false,
@@ -101,9 +102,8 @@
 	    new Cesium.OpenStreetMapImageryProvider()
 	  );
 	  osm.alpha = 0.6;
-
 	});
-
+*/
 
 	var cesiumWidget = new Cesium.Viewer('cesiumContainer', {
 	    imageryProvider: new Cesium.JapanGSIImageryProvider({
@@ -114,6 +114,11 @@
 	    baseLayerPicker: false,
 	    mapProjection: new Cesium.WebMercatorProjection(Cesium.Ellipsoid.WGS84)
 	});
+    promise.then(function(datasource){
+	  viewer.dataSources.add(datasource);
+	  viewer.zoomTo(datasource);
+    });
+
 	var scene = cesiumWidget.scene;
 	//scene.globe.depthTestAgainstTerrain = true;
 	//scene.camera.lookAt(camera_start, camera_direction, Cesium.Cartesian3.UNIT_Z);
