@@ -67,10 +67,10 @@
     window.alert(error);
   });
 */
-
+/*
 	var camera_start = Cesium.Cartesian3.fromDegrees(139.45, 35.41, 1000);
 	var camera_direction = Cesium.Cartesian3.fromDegrees(-75.0, 70.0, 0);
-	var testdata = './Data/hakone_shelter.geojson
+	var testdata = './Data/hakone_shelter.geojson';
 
 	var promise = Cesium.GeoJsonDataSource.load(testdata);
 
@@ -122,3 +122,4 @@
 	var scene = cesiumWidget.scene;
 	//scene.globe.depthTestAgainstTerrain = true;
 	//scene.camera.lookAt(camera_start, camera_direction, Cesium.Cartesian3.UNIT_Z);
+*/
