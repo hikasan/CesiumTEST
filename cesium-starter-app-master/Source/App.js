@@ -126,25 +126,25 @@ var hakone = './Data/hakone_shelter.geojson';
 
 var promise = Cesium.GeoJsonDataSource.load(hakone);
 
-promise.then(function(datasource){
-  var cesiumWidget = new Cesium.Viewer('mapdiv', {
-    animation : false,
-    baseLayerPicker: false,
-    fullscreenButton: false,
-    geocoder: false,
-    homeButton: false,
-    navigationHelpButton: false,
-    sceneModePicker: false,
-    scene3DOnly: true,
-    timeline: false,
-    imageryProvider: new Cesium.OpenStreetMapImageryProvider({
-      url: '//cyberjapandata.gsi.go.jp/xyz/relief/'
-    }),
-    terrainProvider: new Cesium.JapanGSITerrainProvider({
-      heightPower: 1.0
-    })
-  });
+var cesiumWidget = new Cesium.Viewer('mapdiv', {
+  animation : false,
+  baseLayerPicker: false,
+  fullscreenButton: false,
+  geocoder: false,
+  homeButton: false,
+  navigationHelpButton: false,
+  sceneModePicker: false,
+  scene3DOnly: true,
+  timeline: false,
+  imageryProvider: new Cesium.OpenStreetMapImageryProvider({
+    url: '//cyberjapandata.gsi.go.jp/xyz/relief/'
+  }),
+  terrainProvider: new Cesium.JapanGSITerrainProvider({
+    heightPower: 1.0
+  })
+});
 
+promise.then(function(datasource){
   var layers = cesiumWidget.scene.imageryLayers;
   var osm = layers.addImageryProvider(
     new Cesium.OpenStreetMapImageryProvider()
