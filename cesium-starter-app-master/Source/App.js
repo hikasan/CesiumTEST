@@ -137,7 +137,7 @@ var cesiumWidget = new Cesium.Viewer('mapdiv', {
   scene3DOnly: true,
   timeline: false,
   imageryProvider: new Cesium.OpenStreetMapImageryProvider({
-    url: '//cyberjapandata.gsi.go.jp/xyz/relief/'
+    url: 'http://cyberjapandata.gsi.go.jp/xyz/relief/'
   }),
   terrainProvider: new Cesium.JapanGSITerrainProvider({
     heightPower: 1.0
