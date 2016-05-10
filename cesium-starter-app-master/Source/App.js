@@ -16,7 +16,7 @@ Button1.addEventListener('click', function(){
 
     var promise = Cesium.GeoJsonDataSource.load(testdata);
 
-	promise.then(function(datasource){
+    promise.then(function(datasource){
       cesiumWidget.dataSources.add(dataSource);
       var scene = cesiumWidget.scene;
       //scene.globe.depthTestAgainstTerrain = true;
@@ -24,8 +24,8 @@ Button1.addEventListener('click', function(){
       cesiumWidget.zoomTo(datasource);
     }).otherwise(function(error){
         window.alert(error);
-	});
-
+    });
+    alert("Button1");
 }, false);
 
 var Button2 = document.getElementById('Button2');
@@ -76,6 +76,7 @@ Button2.addEventListener('click', function(){
 
 	  cesiumWidget.dataSources.add(datasource);
 	  cesiumWidget.zoomTo(datasource);
+    alert("Button2");
 	});
 }, false);
 
