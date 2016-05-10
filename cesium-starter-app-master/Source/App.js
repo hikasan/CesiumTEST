@@ -1,7 +1,32 @@
 ﻿var cesiumWidget = new Cesium.Viewer('cesiumContainer');
 
-var Button1 = document.getElementById('Button1');
-Button1.addEventListener('click', function(){
+//var Button1 = document.getElementById('Button1');
+//Button1.addEventListener('click', function(){
+/*
+(function(global) {
+    "use strict;"
+
+    // Class ------------------------------------------------
+    function YourModule() {
+    };
+
+    // Header -----------------------------------------------
+    YourModule["prototype"]["method"] = YourModule_method; // YourModule#method(someArg:any):void
+
+    // Implementation ---------------------------------------
+    function YourModule_method(someArg) {
+        // ...
+    }
+
+    // Exports ----------------------------------------------
+    if ("process" in global) {
+        module["exports"] = YourModule;
+    }
+    global["YourModule"] = YourModule;
+
+})((this || 0).self || global);
+*/
+function 処理1() {
     var camera_start = Cesium.Cartesian3.fromDegrees(139.45, 35.41, 1000);
     var camera_direction = Cesium.Cartesian3.fromDegrees(-75.0, 70.0, 0);
     var testdata = './Data/test.geojson';
@@ -26,10 +51,12 @@ Button1.addEventListener('click', function(){
         window.alert(error);
     });
     alert("Button1");
-}, false);
+}
+//}, false);
 
-var Button2 = document.getElementById('Button2');
-Button2.addEventListener('click', function(){
+//var Button2 = document.getElementById('Button2');
+//Button2.addEventListener('click', function(){
+function 処理2() {
 	var camera_start = Cesium.Cartesian3.fromDegrees(139.45, 35.41, 1000);
 	var camera_direction = Cesium.Cartesian3.fromDegrees(-75.0, 70.0, 0);
 	var testdata = './Data/test.geojson';
@@ -77,7 +104,8 @@ Button2.addEventListener('click', function(){
 	  cesiumWidget.dataSources.add(datasource);
 	  cesiumWidget.zoomTo(datasource);
     alert("Button2");
-	});
-}, false);
+}
+//	});
+//}, false);
 
 
