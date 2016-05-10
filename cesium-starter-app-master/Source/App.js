@@ -112,9 +112,9 @@
 	    baseLayerPicker: false,
 	    mapProjection: new Cesium.WebMercatorProjection(Cesium.Ellipsoid.WGS84)
 	});
-    promise.then(function(datasource){
-	  viewer.dataSources.add(datasource);
-	  viewer.zoomTo(datasource);
+//  promise.then(function(datasource){
+//  Viewer.dataSources.add(datasource);
+//  Viewer.zoomTo(datasource);
     });
 
 	var scene = cesiumWidget.scene;
