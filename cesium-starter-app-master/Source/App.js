@@ -28,7 +28,7 @@ Cesium.Math.setRandomNumberSeed(0);
             colorHash[name] = color;
         }
         if (entity.polygon != null) {
-//	        entity.polygon.material = color;
+	        entity.polygon.material = color;
 	        entity.polygon.outline = false;
 	        entity.polygon.extrudedHeight = entity.properties.AverageValue * 10000.0;
         }
@@ -40,19 +40,12 @@ Cesium.Math.setRandomNumberSeed(0);
 //	        entity.cylinder.outlineColor = Cesium.Color.BLACK;
 //        }
         if (entity.point != null) {
-	        //entity.point.Color = color;
-	        //entity.position = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000);
-
-            //var billboard = new BillboardGraphics();
-            //entity.billboard.verticalOrigin = new ConstantProperty(VerticalOrigin.BOTTOM);
-            //var dataUrl = '../Images/iplus.png';
-            //entity.billboard.image = new ConstantProperty(dataUrl);
-	        entity.billboard.image = './Images/Iplus.png';
-	        //entity.billboard.scale = 2.0;
-	        //entity.point.pixelSize = 10;
-            //entity.point.color = Cesium.Color.TRANSPARENT;
-            //entity.point.outlineColor = Cesium.Color.YELLOW;
-            //entity.point.outlineWidth = 3;
+            'entity.point.Color = color;
+            entity.position = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000);
+            entity.point.pixelSize = 10;
+            entity.point.color = Cesium.Color.TRANSPARENT;
+            entity.point.outlineColor = Cesium.Color.YELLOW;
+            entity.point.outlineWidth = 3;
         }
         if (entity.polyline != null) {
 	        entity.polyline.material = Cesium.Color.BLUE;
