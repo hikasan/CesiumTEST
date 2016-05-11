@@ -42,6 +42,7 @@ Cesium.Math.setRandomNumberSeed(0);
 	        var wktime;
 	        entity.position.getValue(wktime, wkposition);
 	        var wkposition = Cesium.Cartesian3.fromDegrees(wkposition.x, wkposition.y, 1000);
+	        entity.position = wkposition;
 	        entity.billboard.image = './Images/Iplus.png';
 	        entity.point.pixelSize = 10;
             entity.point.color = Cesium.Color.YELLOW;
