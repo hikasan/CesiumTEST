@@ -62,7 +62,7 @@ Cesium.Math.setRandomNumberSeed(0);
 //        }
 //    });
     cesiumWidget.entities.add({
-        position : Cesium.Cartesian3.fromDegrees(140.7, 37.9,1000),
+        position : Cesium.Cartesian3.fromDegrees(140.7, 37.9, 100),
         point : {
             pixelSize : 10,
             color : Cesium.Color.YELLOW
