@@ -39,8 +39,8 @@ Cesium.Math.setRandomNumberSeed(0);
 //        if (entity.cylinder != null) {
 //	        entity.cylinder.outlineColor = Cesium.Color.BLACK;
 //        }
-        if (entity.point != null) {
-/*            entities.add({
+        if (entity.billboard != null) {
+            entities.add({
                 position : Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000),
                 point : {
                     pixelSize : 10,
@@ -50,12 +50,11 @@ Cesium.Math.setRandomNumberSeed(0);
                     entity.point.outlineWidth = 3;
                 }
             });
-*/
-            //var m = entity.remove;
+            //var m = entity.remove();
             //entity.point.Color = color;
 //var wkCartesian3 = entity.position.clone();
             //entity.position = Cesium.Cartesian3.fromDegrees(wkCartesian3.x, wkCartesian3.y, 1000);
-            entity.properties.TestName = '999';
+            //entity.properties.TestName = '999';
             //entity.point.pixelSize = 8;
             //entity.point.color = Cesium.Color.TRANSPARENT;
             //entity.point.outlineColor = Cesium.Color.YELLOW;
