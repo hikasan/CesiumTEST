@@ -53,7 +53,7 @@ Cesium.Math.setRandomNumberSeed(0);
 */
             //var m = entity.remove;
             //entity.point.Color = color;
-            //entity.position = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000);
+            entity.position = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000);
             //entity.point.pixelSize = 8;
             //entity.point.color = Cesium.Color.TRANSPARENT;
             //entity.point.outlineColor = Cesium.Color.YELLOW;
