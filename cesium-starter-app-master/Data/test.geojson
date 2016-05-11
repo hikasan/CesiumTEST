@@ -109,7 +109,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "TestName": "010"
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [
