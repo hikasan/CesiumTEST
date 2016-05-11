@@ -46,8 +46,8 @@ Cesium.Math.setRandomNumberSeed(0);
 	        entity.billboard.image = '../Images/Iplus.png';
 	        entity.billboard.scale = 2.0;
 	        entity.point.pixelSize = 10;
-            entity.point.color = Cesium.Color.TRANSPARENT;
-            entity.point.outlineColor = Cesium.Color.YELLOW;
+            //entity.point.color = Cesium.Color.TRANSPARENT;
+            //entity.point.outlineColor = Cesium.Color.YELLOW;
             entity.point.outlineWidth = 3;
 
         }
