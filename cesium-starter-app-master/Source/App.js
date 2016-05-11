@@ -15,6 +15,7 @@ Cesium.Math.setRandomNumberSeed(0);
   promise.then(function(datasource){
     
     var entities = datasource.entities.values;
+    var pointentities = new Cesium.Entity();
     
     var colorHash = {};
     for (var i = 0; i < entities.length; i++) {
@@ -47,7 +48,7 @@ Cesium.Math.setRandomNumberSeed(0);
             entity.properties.Tester = '991';
 //var wk = entity.position.clone();
 //            var wk2 = Cesium.Cartesian3.fromDegrees(wk.x, wk.y, 1000);
-            entities.add({
+            pointentities.add({
                 position : entity.position,
                 point : {
                     pixelSize : 10,
@@ -123,6 +124,8 @@ Cesium.Math.setRandomNumberSeed(0);
         }
         
     }
+
+    entities.merge(pointentities);
 
     cesiumWidget.dataSources.add(datasource);
 //    cesiumWidget.entities.add({
