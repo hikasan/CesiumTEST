@@ -28,7 +28,7 @@ Cesium.Math.setRandomNumberSeed(0);
             colorHash[name] = color;
         }
         if (entity.polygon != null) {
-	        entity.polygon.material = color;
+//	        entity.polygon.material = color;
 	        entity.polygon.outline = false;
 	        entity.polygon.extrudedHeight = entity.properties.AverageValue * 10000.0;
         }
