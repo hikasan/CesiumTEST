@@ -43,11 +43,11 @@ Cesium.Math.setRandomNumberSeed(0);
 	        //entity.point.Color = color;
 	        //entity.position = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000);
 
-            var billboard = new BillboardGraphics();
-            entity.billboard.verticalOrigin = new ConstantProperty(VerticalOrigin.BOTTOM);
-            var dataUrl = '../Images/iplus.png';
-            entity.billboard.image = new ConstantProperty(dataUrl);
-	        //entity.billboard.image = new ConstantProperty('./Images/iplus.png');
+            //var billboard = new BillboardGraphics();
+            //entity.billboard.verticalOrigin = new ConstantProperty(VerticalOrigin.BOTTOM);
+            //var dataUrl = '../Images/iplus.png';
+            //entity.billboard.image = new ConstantProperty(dataUrl);
+	        entity.billboard.image = './Images/iplus.png';
 	        //entity.billboard.scale = 2.0;
 	        //entity.point.pixelSize = 10;
             //entity.point.color = Cesium.Color.TRANSPARENT;
