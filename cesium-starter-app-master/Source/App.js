@@ -39,7 +39,7 @@ Cesium.Math.setRandomNumberSeed(0);
 //        if (entity.cylinder != null) {
 //	        entity.cylinder.outlineColor = Cesium.Color.BLACK;
 //        }
-        if (entity.point != null && entity.properties.markerSymbol != null) {
+        if (entity.point != null) {
 /*            entities.add({
                 position : Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000),
                 point : {
