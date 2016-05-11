@@ -50,7 +50,7 @@ Cesium.Math.setRandomNumberSeed(0);
                     entity.point.outlineWidth = 3;
                 }
             });
-            var m = entity.remove;
+            //var m = entity.remove;
             //entity.point.Color = color;
             //entity.position = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000);
             //entity.point.pixelSize = 8;
@@ -82,7 +82,9 @@ Cesium.Math.setRandomNumberSeed(0);
 //            entity.point.outlineWidth = 3;
 //        }
 //    });
-
+    //データにズーム
     cesiumWidget.zoomTo(datasource);
-
+    //先頭レコードの位置へカメラをズームする
+    //var lnglat = datasource.features[0].geometry.coordinates;
+    //cesiumWidget.panTo(lnglat[0], lnglat[1]);
   });
