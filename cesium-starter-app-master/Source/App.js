@@ -43,9 +43,12 @@ Cesium.Math.setRandomNumberSeed(0);
 	        entity.position.getValue(wktime, wkposition);
 	        var wkposition = Cesium.Cartesian3.fromDegrees(wkposition.x, wkposition.y, 1000);
 	        entity.position = wkposition;
+
 	        entity.billboard.image = './Images/Iplus.png';
 	        entity.point.pixelSize = 10;
-            entity.point.color = Cesium.Color.YELLOW;
+            entity.point.color = Cesium.Color.TRANSPARENT;
+            entity.point.outlineColor = Cesium.Color.YELLOW;
+            entity.point.outlineWidth = 3;
 
 	        //entity.billboard.scale = 2.0;
         }
