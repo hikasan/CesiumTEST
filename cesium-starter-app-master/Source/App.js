@@ -41,46 +41,46 @@ Cesium.Math.setRandomNumberSeed(0);
 //	        entity.cylinder.outlineColor = Cesium.Color.BLACK;
 //        }
         if (entity.parent != null) {
-            entity.properties.TestName = '990';
+            entity.properties.Tester = '990';
         }
         if (entity.billboard != null) {
-            entity.properties.TestName = '991';
+            entity.properties.Tester = '991';
         }
         if (entity.box != null) {
-            entity.properties.TestName = '992';
+            entity.properties.Tester = '992';
         }
         if (entity.corridor != null) {
-            entity.properties.TestName = '993';
+            entity.properties.Tester = '993';
         }
         if (entity.cylinder != null) {
-            entity.properties.TestName = '994';
+            entity.properties.Tester = '994';
         }
         if (entity.ellipse != null) {
-            entity.properties.TestName = '995';
+            entity.properties.Tester = '995';
         }
         if (entity.ellipsoid != null) {
-            entity.properties.TestName = '996';
+            entity.properties.Tester = '996';
         }
         if (entity.label != null) {
-            entity.properties.TestName = '997';
+            entity.properties.Tester = '997';
         }
         if (entity.model != null) {
-            entity.properties.TestName = '998';
+            entity.properties.Tester = '998';
         }
         if (entity.path != null) {
-            entity.properties.TestName = '999';
+            entity.properties.Tester = '999';
         }
         if (entity.point != null) {
-            entity.properties.TestName = 'xxx';
+            entity.properties.Tester = 'xxx';
         }
         if (entity.polylineVolume != null) {
-            entity.properties.TestName = 'xx';
+            entity.properties.Tester = 'xx';
         }
         if (entity.rectangle != null) {
-            entity.properties.TestName = 'x';
+            entity.properties.Tester = 'x';
         }
         if (entity.wall != null) {
-            entity.properties.TestName = 'qqq';
+            entity.properties.Tester = 'qqq';
         }
 /*
         if (entity.billboard != null) {
