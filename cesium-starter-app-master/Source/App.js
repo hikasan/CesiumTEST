@@ -40,7 +40,7 @@ Cesium.Math.setRandomNumberSeed(0);
 //	        entity.cylinder.outlineColor = Cesium.Color.BLACK;
 //        }
         if (entity.point != null) {
-            'entity.point.Color = color;
+            //entity.point.Color = color;
             entity.position = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000);
             entity.point.pixelSize = 10;
             entity.point.color = Cesium.Color.TRANSPARENT;
