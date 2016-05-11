@@ -55,12 +55,12 @@ Cesium.Math.setRandomNumberSeed(0);
     }
 
     cesiumWidget.dataSources.add(datasource);
-    cesiumWidget.entities.add({
-        position : Cesium.Cartesian3.fromDegrees(140.77237129211426, 37.97918331477581,1000),
-        billboard : {
-            image : './Images/Iplus.png'
-        }
-    });
+//    cesiumWidget.entities.add({
+//        position : Cesium.Cartesian3.fromDegrees(140.77237129211426, 37.97918331477581,1000),
+//        billboard : {
+//            image : './Images/Iplus.png'
+//        }
+//    });
     cesiumWidget.zoomTo(datasource);
 
   });
