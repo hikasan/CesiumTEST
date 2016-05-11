@@ -62,7 +62,7 @@ Cesium.Math.setRandomNumberSeed(0);
             //entity.point.outlineWidth = 3;
         }
         if (entity.polyline != null) {
-	        entity.polyline.material = Cesium.Color.BLUE;
+	        entity.polyline.material = Cesium.Color.RED;
 	        //entity.corridor.extrudedHeight = entity.properties.AverageValue * 10000.0;
         }
         
