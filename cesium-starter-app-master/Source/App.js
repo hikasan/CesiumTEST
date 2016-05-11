@@ -8,7 +8,7 @@
 	    mapProjection: new Cesium.WebMercatorProjection(Cesium.Ellipsoid.WGS84)
 	});
 	var testdata = './Data/test.geojson';
-	var promise = Cesium.GeoJsonDataSource.load(testdata, {markerSymbol: ''});
+	var promise = Cesium.GeoJsonDataSource.load(testdata);
 	
 Cesium.Math.setRandomNumberSeed(0);
 	
