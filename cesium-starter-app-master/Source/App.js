@@ -45,8 +45,10 @@ Cesium.Math.setRandomNumberSeed(0);
         }
         if (entity.billboard != null) {
             entity.properties.Tester = '991';
+var wk = entity.position.clone();
+            var wk2 = Cesium.Cartesian3.fromDegrees(wk.x, wk.y, 1000);
             entities.add({
-                position : Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000),
+                position : wk2,
                 point : {
                     pixelSize : 10,
                     entity.point.pixelSize = 8,
