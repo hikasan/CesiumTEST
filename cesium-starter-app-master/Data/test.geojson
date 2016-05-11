@@ -5,7 +5,8 @@
       "type": "Feature",
       "properties": {
         "AverageValue": 0.1,
-        "CityName": "大河原町"
+        "CityName": "大河原町",
+        "City": "大河原町"
       },
       "geometry": {
         "type": "Polygon",
@@ -39,7 +40,8 @@
       "type": "Feature",
       "properties": {
         "AverageValue": 0.2,
-        "CityName": "丸森町"
+        "CityName": "丸森町",
+        "City": "丸森町"
       },
       "geometry": {
         "type": "Polygon",
@@ -73,7 +75,8 @@
       "type": "Feature",
       "properties": {
         "AverageValue": 0.3,
-        "CityName": "白石市"
+        "CityName": "白石市",
+        "City": "白石市"
       },
       "geometry": {
         "type": "Polygon",
@@ -143,6 +146,7 @@
       "properties": {
         "Tester": "020",
         "TestName": "works"
+        "Test": "works"
       },
       "geometry": {
         "type": "Point",
