@@ -33,7 +33,7 @@ Cesium.Math.setRandomNumberSeed(0);
 	        entity.polygon.extrudedHeight = entity.properties.AverageValue * 10000.0;
         }
         if (entity.corridor != null) {
-	        entity.corridor.outlineColor = color;
+	        entity.corridor.outlineColor = Cesium.Color.BLUE;
 	        //entity.corridor.extrudedHeight = entity.properties.AverageValue * 10000.0;
         }
         if (entity.point != null) {
