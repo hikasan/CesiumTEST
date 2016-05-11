@@ -145,7 +145,7 @@
       "type": "Feature",
       "properties": {
         "Tester": "020",
-        "TestName": "works"
+        "TestName": "works",
         "Test": "works"
       },
       "geometry": {
