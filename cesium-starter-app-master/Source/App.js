@@ -80,9 +80,9 @@ Cesium.Math.setRandomNumberSeed(0);
         if (entity.path != null) {
             entity.properties.Tester = '999';
         }
-        if (entity.point != null) {
-            entity.properties.Tester = 'xxx';
-        }
+//        if (entity.point != null) {
+//            entity.properties.Tester = 'xxx';
+//        }
         if (entity.polylineVolume != null) {
             entity.properties.Tester = 'xx';
         }
