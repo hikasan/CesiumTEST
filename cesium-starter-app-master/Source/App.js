@@ -45,6 +45,16 @@ Cesium.Math.setRandomNumberSeed(0);
         }
         if (entity.billboard != null) {
             entity.properties.Tester = '991';
+            entities.add({
+                position : Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000),
+                point : {
+                    pixelSize : 10,
+                    entity.point.pixelSize = 8;
+                    entity.point.color = Cesium.Color.TRANSPARENT;
+                    entity.point.outlineColor = Cesium.Color.YELLOW;
+                    entity.point.outlineWidth = 3;
+                }
+            });
         }
         if (entity.box != null) {
             entity.properties.Tester = '992';
