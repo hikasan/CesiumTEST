@@ -15,7 +15,7 @@ Cesium.Math.setRandomNumberSeed(0);
   promise.then(function(datasource){
     
     var entities = datasource.entities.values;
-    var pointentities = new Cesium.Entity();
+//    var pointentities = new Cesium.Entity();
     
     var colorHash = {};
     for (var i = 0; i < entities.length; i++) {
@@ -48,6 +48,7 @@ Cesium.Math.setRandomNumberSeed(0);
             entity.properties.Tester = '991';
 //var wk = entity.position.clone();
 //            var wk2 = Cesium.Cartesian3.fromDegrees(wk.x, wk.y, 1000);
+/*
             pointentities.add({
                 position : entity.position,
                 point : {
@@ -58,6 +59,7 @@ Cesium.Math.setRandomNumberSeed(0);
                     entity.point.outlineWidth = 3
                 }
             });
+*/
         }
         if (entity.box != null) {
             entity.properties.Tester = '992';
@@ -83,9 +85,9 @@ Cesium.Math.setRandomNumberSeed(0);
         if (entity.path != null) {
             entity.properties.Tester = '999';
         }
-//        if (entity.point != null) {
-//            entity.properties.Tester = 'xxx';
-//        }
+        if (entity.point != null) {
+            entity.properties.Tester = 'xxx';
+        }
         if (entity.polylineVolume != null) {
             entity.properties.Tester = 'xx';
         }
@@ -95,29 +97,6 @@ Cesium.Math.setRandomNumberSeed(0);
         if (entity.wall != null) {
             entity.properties.Tester = 'qqq';
         }
-/*
-        if (entity.billboard != null) {
-            entities.add({
-                position : Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000),
-                point : {
-                    pixelSize : 10,
-                    entity.point.pixelSize = 8;
-                    entity.point.color = Cesium.Color.TRANSPARENT;
-                    entity.point.outlineColor = Cesium.Color.YELLOW;
-                    entity.point.outlineWidth = 3;
-                }
-            });
-            //var m = entity.remove();
-            //entity.point.Color = color;
-//var wkCartesian3 = entity.position.clone();
-            //entity.position = Cesium.Cartesian3.fromDegrees(wkCartesian3.x, wkCartesian3.y, 1000);
-            entity.properties.TestName = '999';
-            //entity.point.pixelSize = 8;
-            //entity.point.color = Cesium.Color.TRANSPARENT;
-            //entity.point.outlineColor = Cesium.Color.YELLOW;
-            //entity.point.outlineWidth = 3;
-        }
-*/
         if (entity.polyline != null) {
 	        entity.polyline.material = Cesium.Color.BLUE;
 	        //entity.corridor.extrudedHeight = entity.properties.AverageValue * 10000.0;
@@ -125,7 +104,7 @@ Cesium.Math.setRandomNumberSeed(0);
         
     }
 
-    entities.merge(pointentities);
+//    entities.merge(pointentities);
 
     cesiumWidget.dataSources.add(datasource);
 //    cesiumWidget.entities.add({
