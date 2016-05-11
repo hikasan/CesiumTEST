@@ -141,7 +141,7 @@
     {
       "type": "Feature",
       "properties": {
-        "CityName": "角田市"
+        "TestName": "020"
       },
       "geometry": {
         "type": "Point",
