@@ -43,7 +43,7 @@ Cesium.Math.setRandomNumberSeed(0);
 	        //entity.point.Color = color;
 	        entity.position = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000);
 
-	        entity.billboard.image = new ConstantProperty('../Images/Iplus.png');
+	        entity.billboard.image = new ConstantProperty('./Images/Iplus.png');
 	        entity.billboard.scale = 2.0;
 	        entity.point.pixelSize = 10;
             //entity.point.color = Cesium.Color.TRANSPARENT;
