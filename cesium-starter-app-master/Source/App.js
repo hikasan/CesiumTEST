@@ -39,14 +39,24 @@ Cesium.Math.setRandomNumberSeed(0);
 //        if (entity.cylinder != null) {
 //	        entity.cylinder.outlineColor = Cesium.Color.BLACK;
 //        }
-        if (entity.point != null) {
+        if (entity.point != null && entity.properties.markerSymbol != null) {
+            entities.add({
+                position : Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000),
+                point : {
+                    pixelSize : 10,
+                    entity.point.pixelSize = 8;
+                    entity.point.color = Cesium.Color.TRANSPARENT;
+                    entity.point.outlineColor = Cesium.Color.YELLOW;
+                    entity.point.outlineWidth = 3;
+                }
+            });
+            remove(entity);
             //entity.point.Color = color;
-            entity.removeProperty('marker-color');
-            entity.position = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000);
-            entity.point.pixelSize = 8;
-            entity.point.color = Cesium.Color.TRANSPARENT;
-            entity.point.outlineColor = Cesium.Color.YELLOW;
-            entity.point.outlineWidth = 3;
+            //entity.position = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000);
+            //entity.point.pixelSize = 8;
+            //entity.point.color = Cesium.Color.TRANSPARENT;
+            //entity.point.outlineColor = Cesium.Color.YELLOW;
+            //entity.point.outlineWidth = 3;
         }
         if (entity.polyline != null) {
 	        entity.polyline.material = Cesium.Color.BLUE;
