@@ -55,6 +55,7 @@ Cesium.Math.setRandomNumberSeed(0);
             //entity.point.Color = color;
 var wkCartesian3 = entity.position.clone();
             entity.position = Cesium.Cartesian3.fromDegrees(wkCartesian3.x, wkCartesian3.y, 1000);
+            entity.properties.TestName = '999';
             //entity.point.pixelSize = 8;
             //entity.point.color = Cesium.Color.TRANSPARENT;
             //entity.point.outlineColor = Cesium.Color.YELLOW;
