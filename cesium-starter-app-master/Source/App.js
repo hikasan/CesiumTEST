@@ -41,14 +41,18 @@ Cesium.Math.setRandomNumberSeed(0);
 //        }
         if (entity.point != null) {
 	        //entity.point.Color = color;
-	        entity.position = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000);
+	        //entity.position = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000);
 
-	        entity.billboard.image = new ConstantProperty('./Images/Iplus.png');
-	        entity.billboard.scale = 2.0;
-	        entity.point.pixelSize = 10;
+            var billboard = new BillboardGraphics();
+            entity.billboard.verticalOrigin = new ConstantProperty(VerticalOrigin.BOTTOM);
+            var dataUrl = './Images/Iplus.png';
+            entity.billboard.image = new ConstantProperty(dataUrl);
+	        //entity.billboard.image = new ConstantProperty('./Images/Iplus.png');
+	        //entity.billboard.scale = 2.0;
+	        //entity.point.pixelSize = 10;
             //entity.point.color = Cesium.Color.TRANSPARENT;
             //entity.point.outlineColor = Cesium.Color.YELLOW;
-            entity.point.outlineWidth = 3;
+            //entity.point.outlineWidth = 3;
         }
         if (entity.polyline != null) {
 	        entity.polyline.material = Cesium.Color.BLUE;
