@@ -38,19 +38,15 @@ Cesium.Math.setRandomNumberSeed(0);
         }
         if (entity.point != null) {
 	        //entity.point.Color = color;
-	        var wkposition;
-	        var wktime;
-	        entity.position.getValue(wktime, wkposition);
-	        var wkposition = Cesium.Cartesian3.fromDegrees(wkposition.x, wkposition.y, 1000);
-	        entity.position = wkposition;
+	        entity.position = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000);
 
-	        entity.billboard.image = './Images/Iplus.png';
+	        entity.billboard.image = '../Images/Iplus.png';
+	        entity.billboard.scale = 2.0;
 	        entity.point.pixelSize = 10;
             entity.point.color = Cesium.Color.TRANSPARENT;
             entity.point.outlineColor = Cesium.Color.YELLOW;
             entity.point.outlineWidth = 3;
 
-	        //entity.billboard.scale = 2.0;
         }
     }
 
