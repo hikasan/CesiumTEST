@@ -32,10 +32,13 @@ Cesium.Math.setRandomNumberSeed(0);
 	        entity.polygon.outline = false;
 	        entity.polygon.extrudedHeight = entity.properties.AverageValue * 10000.0;
         }
-        if (entity.corridor != null) {
-	        entity.corridor.outlineColor = Cesium.Color.BLUE;
-	        //entity.corridor.extrudedHeight = entity.properties.AverageValue * 10000.0;
-        }
+//        if (entity.corridor != null) {
+//	        entity.corridor.outlineColor = Cesium.Color.BLUE;
+//	        //entity.corridor.extrudedHeight = entity.properties.AverageValue * 10000.0;
+//        }
+//        if (entity.cylinder != null) {
+//	        entity.cylinder.outlineColor = Cesium.Color.BLACK;
+//        }
         if (entity.point != null) {
 	        //entity.point.Color = color;
 	        entity.position = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000);
