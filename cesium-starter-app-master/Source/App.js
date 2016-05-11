@@ -8,7 +8,7 @@
 	    mapProjection: new Cesium.WebMercatorProjection(Cesium.Ellipsoid.WGS84)
 	});
 	var testdata = './Data/test.geojson';
-	var promise = Cesium.GeoJsonDataSource.load(testdata, {markerSymbol : ""});
+	var promise = Cesium.GeoJsonDataSource.load(testdata, {markerSymbol: ''});
 	
 Cesium.Math.setRandomNumberSeed(0);
 	
@@ -41,7 +41,7 @@ Cesium.Math.setRandomNumberSeed(0);
 //        }
         if (entity.point != null) {
             //entity.point.Color = color;
-            //entity.position = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000);
+            entity.position = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000);
             entity.point.pixelSize = 8;
             entity.point.color = Cesium.Color.TRANSPARENT;
             entity.point.outlineColor = Cesium.Color.YELLOW;
