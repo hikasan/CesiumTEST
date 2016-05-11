@@ -31,8 +31,6 @@ Cesium.Math.setRandomNumberSeed(0);
 //	        entity.polygon.material = color;
 	        entity.polygon.outline = false;
 	        entity.polygon.extrudedHeight = entity.properties.AverageValue * 10000.0;
-	    } else {
-	        entity.properties.TestName = "+++";
         }
 //        if (entity.corridor != null) {
 //	        entity.corridor.outlineColor = Cesium.Color.BLUE;
@@ -51,8 +49,12 @@ Cesium.Math.setRandomNumberSeed(0);
             //entity.point.color = Cesium.Color.TRANSPARENT;
             //entity.point.outlineColor = Cesium.Color.YELLOW;
             entity.point.outlineWidth = 3;
-
         }
+        if (entity.polyline != null) {
+	        entity.polyline.material = Cesium.Color.BLUE;
+	        //entity.corridor.extrudedHeight = entity.properties.AverageValue * 10000.0;
+        }
+        
     }
 
     cesiumWidget.dataSources.add(datasource);
