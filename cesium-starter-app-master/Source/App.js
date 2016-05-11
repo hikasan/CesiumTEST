@@ -39,8 +39,50 @@ Cesium.Math.setRandomNumberSeed(0);
 //        if (entity.cylinder != null) {
 //	        entity.cylinder.outlineColor = Cesium.Color.BLACK;
 //        }
+        if (entity.parent != null) {
+            entity.properties.TestName = '990';
+        }
         if (entity.billboard != null) {
+            entity.properties.TestName = '991';
+        }
+        if (entity.box != null) {
+            entity.properties.TestName = '992';
+        }
+        if (entity.corridor != null) {
+            entity.properties.TestName = '993';
+        }
+        if (entity.cylinder != null) {
+            entity.properties.TestName = '994';
+        }
+        if (entity.ellipse != null) {
+            entity.properties.TestName = '995';
+        }
+        if (entity.ellipsoid != null) {
+            entity.properties.TestName = '996';
+        }
+        if (entity.label != null) {
+            entity.properties.TestName = '997';
+        }
+        if (entity.model != null) {
+            entity.properties.TestName = '998';
+        }
+        if (entity.path != null) {
+            entity.properties.TestName = '999';
+        }
+        if (entity.point != null) {
+            entity.properties.TestName = 'xxx';
+        }
+        if (entity.polylineVolume != null) {
+            entity.properties.TestName = 'xx';
+        }
+        if (entity.rectangle != null) {
+            entity.properties.TestName = 'x';
+        }
+        if (entity.wall != null) {
+            entity.properties.TestName = 'qqq';
+        }
 /*
+        if (entity.billboard != null) {
             entities.add({
                 position : Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000),
                 point : {
@@ -51,7 +93,6 @@ Cesium.Math.setRandomNumberSeed(0);
                     entity.point.outlineWidth = 3;
                 }
             });
-*/
             //var m = entity.remove();
             //entity.point.Color = color;
 //var wkCartesian3 = entity.position.clone();
@@ -62,6 +103,7 @@ Cesium.Math.setRandomNumberSeed(0);
             //entity.point.outlineColor = Cesium.Color.YELLOW;
             //entity.point.outlineWidth = 3;
         }
+*/
         if (entity.polyline != null) {
 	        entity.polyline.material = Cesium.Color.RED;
 	        //entity.corridor.extrudedHeight = entity.properties.AverageValue * 10000.0;
