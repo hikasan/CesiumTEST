@@ -45,7 +45,7 @@ Cesium.Math.setRandomNumberSeed(0);
 
             var billboard = new BillboardGraphics();
             entity.billboard.verticalOrigin = new ConstantProperty(VerticalOrigin.BOTTOM);
-            var dataUrl = './Images/Iplus.png';
+            var dataUrl = './Images/iplus.png';
             entity.billboard.image = new ConstantProperty(dataUrl);
 	        //entity.billboard.image = new ConstantProperty('./Images/iplus.png');
 	        //entity.billboard.scale = 2.0;
