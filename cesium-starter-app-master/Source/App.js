@@ -61,6 +61,14 @@ Cesium.Math.setRandomNumberSeed(0);
 //            image : './Images/Iplus.png'
 //        }
 //    });
+    cesiumWidget.entities.add({
+        position : Cesium.Cartesian3.fromDegrees(140.7, 37.9,1000),
+        point : {
+            pixelSize : 10,
+            color : Cesium.Color.YELLOW
+        }
+    });
+
     cesiumWidget.zoomTo(datasource);
 
   });
