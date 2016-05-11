@@ -31,6 +31,7 @@ Cesium.Math.setRandomNumberSeed(0);
 	        entity.polygon.material = color;
 	        entity.polygon.outline = false;
 	        entity.polygon.extrudedHeight = entity.properties.AverageValue * 10000.0;
+	        entity.properties.CityName ='xxx';
         }
 //        if (entity.corridor != null) {
 //	        entity.corridor.outlineColor = Cesium.Color.BLUE;
