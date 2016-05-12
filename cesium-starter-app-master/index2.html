@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CesiumTEST</title>
+  <script src="ThirdParty/Cesium/Cesium.js"></script>
+  <script src="./JapanGSIImageryProvider.js"></script>
+  <script src="./JapanGSITerrainProvider.js"></script>
+  <script type="text/javascript" src="WebGLGlobeDataSource.js"></script>
+<script typr="text/javascript">
+function makeButtonCtrl (){
+var dataSource = new WebGLGlobeDataSource();
+dataSource.loadUrl('./Data/population909500.json').then(function() {
+    function createSeriesSetter(seriesName) {
+        return function() {
+            dataSource.seriesToDisplay = seriesName;
+        };
+    }
+    var btn = document.createElement("input");  /*  inputタグを作成して…  */
+    for (var i = 0; i < dataSource.seriesNames.length; i++) {
+        var seriesName = dataSource.seriesNames[i];
+        btn.id = "button" + seriesName;
+        btn.type = "button";
+        btn.value = seriesName;
+        document.getElementById("controlPanel").appendChild(btn);
+        document.getElementById("button" + seriesName).attachEvent("onclick", createSeriesSetter(seriesName));
+    }
+});
+</script>
+  <style>
+      @import url(ThirdParty/Cesium/Widgets/widgets.css);
+      html, body, #cesiumContainer {
+          width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+          font-family: sans-serif; color: #edffff;
+      }
+      #controlPanel {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        background: rgba(42, 42, 42, 0.8);
+        padding: 5px 8px;
+        border-radius: 5px;
+      }
+      label {
+        cursor: pointer;
+      }
+      label:hover span {
+        text-decoration: underline;
+      }
+  </style>
+</head>
+<body onLoad="makeButtonCtrl();">
+  <noscript>
+  <p>JavaScriptの機能が有効でないと、このページは正常に動作しません。</p>
+  </noscript>
+  <div id="cesiumContainer"></div>
+  <div id="loadingOverlay"><h1>Loading...</h1></div>
+  <script src="Source/App2.js"></script>
+
+  <div id="controlPanel">
+  </div>
+</body>
+<script>
+</html>
