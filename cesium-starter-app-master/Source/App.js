@@ -101,6 +101,7 @@ Cesium.Math.setRandomNumberSeed(0);
 //        }
 //    });
 
+/*
     var entities = datasource.entities.values;
     for (var i = 0; i < entities.length; i++) {
         var entity = entities[i];
@@ -118,6 +119,7 @@ Cesium.Math.setRandomNumberSeed(0);
             });
         }
     }
+*/
     //データにズーム
     cesiumWidget.zoomTo(datasource);
     //先頭レコードの位置へカメラをズームする
