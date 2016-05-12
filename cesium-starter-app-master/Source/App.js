@@ -39,6 +39,16 @@ Cesium.Math.setRandomNumberSeed(0);
         }
         if (entity.billboard != null) {
             entity.properties.Tester = '991';
+            entities.add({
+                position : entity.position,
+                point : {
+                    pixelSize : 10,
+                    pixelSize : 8,
+                    color : Cesium.Color.TRANSPARENT,
+                    outlineColor : Cesium.Color.YELLOW,
+                    outlineWidth : 3
+                }
+            });
         }
         if (entity.box != null) {
             entity.properties.Tester = '992';
@@ -106,6 +116,7 @@ Cesium.Math.setRandomNumberSeed(0);
     });
 */
 
+/*
     //var entities = datasource.entities.values;
     for (var i = 0; i < entities.length; i++) {
         var entity = entities[i];
@@ -114,7 +125,8 @@ Cesium.Math.setRandomNumberSeed(0);
             //var heightPosition = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1 * 10000.0);
             //var heightPosition = entity.position.clone();
             //heightPosition.y = heightPosition.y * 100;
-            cesiumWidget.entities.add({
+            //cesiumWidget.entities.add({
+            entities.add({
                 position : entity.position,
                 point : {
                     pixelSize : 10,
@@ -126,7 +138,7 @@ Cesium.Math.setRandomNumberSeed(0);
             });
         }
     }
-
+*/
     //データにズーム
     cesiumWidget.zoomTo(datasource);
     //先頭レコードの位置へカメラをズームする
