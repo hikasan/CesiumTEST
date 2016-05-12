@@ -127,6 +127,9 @@ Cesium.Math.setRandomNumberSeed(0);
                     outlineWidth : 3
                 }
             });
+
+            heightPosition.z = heightPosition.z - 1000;
+
         }
     }
 
