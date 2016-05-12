@@ -29,7 +29,7 @@ Cesium.Math.setRandomNumberSeed(0);
         }
         if (entity.polygon != null) {
 	        //entity.polygon.material = color;
-	        entity.polygon.material = Cesium.Color.fromHsl((0.6 - (entity.properties.AverageValue * 10000.0 * 0.5)), 1.0, 0.5);
+	        entity.polygon.material = Cesium.Color.fromHsl((0.6 - (entity.properties.AverageValue * 100000.0 * 0.5)), 1.0, 0.5);
 	        entity.polygon.outline = false;
 	        entity.polygon.extrudedHeight = entity.properties.AverageValue * 10000.0;
 	        entity.properties.CityName ='xxx';
@@ -112,8 +112,8 @@ Cesium.Math.setRandomNumberSeed(0);
         if (entity.billboard != null) {
             //entity.properties.Tester = '991';
             //var heightPosition = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1 * 10000.0);
-            var heightPosition = entity.position.clone();
-            heightPosition.y = heightPosition.y * 100;
+            //var heightPosition = entity.position.clone();
+            //heightPosition.y = heightPosition.y * 100;
             cesiumWidget.entities.add({
                 position : entity.position,
                 point : {
