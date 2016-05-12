@@ -109,7 +109,7 @@ Cesium.Math.setRandomNumberSeed(0);
         if (entity.billboard != null) {
             //entity.properties.Tester = '991';
             cesiumWidget.entities.add({
-                position : entity.position,
+                position : Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1000),
                 point : {
                     pixelSize : 10,
                     pixelSize : 8,
