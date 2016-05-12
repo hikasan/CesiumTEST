@@ -119,10 +119,10 @@ Cesium.Math.setRandomNumberSeed(0);
             //cesiumWidget.entities.add({
             entities.add({
                 position : entity.position,
-                Property :{
+/*                Property :{
                    Tester : 'AAA'
                 },
-                point : {
+*/                point : {
                     pixelSize : 10,
                     pixelSize : 8,
                     color : Cesium.Color.TRANSPARENT,
