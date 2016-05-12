@@ -28,7 +28,8 @@ Cesium.Math.setRandomNumberSeed(0);
             colorHash[name] = color;
         }
         if (entity.polygon != null) {
-	        entity.polygon.material = color;
+	        //entity.polygon.material = color;
+	        entity.polygon.material = Cesium.Color.fromHsl((0.6 - (entity.properties.AverageValue * 10000.0 * 0.5)), 1.0, 0.5);
 	        entity.polygon.outline = false;
 	        entity.polygon.extrudedHeight = entity.properties.AverageValue * 10000.0;
 	        entity.properties.CityName ='xxx';
@@ -91,7 +92,9 @@ Cesium.Math.setRandomNumberSeed(0);
 //        }
 //    });
 /*
-    cesiumWidget.entities.add({
+//    cesiumWidget.entities.add({
+      entities.add({
+//        position : Cesium.Cartesian3.fromDegrees(140.7, 37.9, 100),
         position : Cesium.Cartesian3.fromDegrees(140.7, 37.9, 100),
         point : {
             pixelSize : 10,
@@ -112,7 +115,7 @@ Cesium.Math.setRandomNumberSeed(0);
             var heightPosition = entity.position.clone();
             heightPosition.y = heightPosition.y * 100;
             cesiumWidget.entities.add({
-                position : heightPosition,
+                position : entity.position,
                 point : {
                     pixelSize : 10,
                     pixelSize : 8,
