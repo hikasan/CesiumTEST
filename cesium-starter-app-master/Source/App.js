@@ -118,9 +118,10 @@ Cesium.Math.setRandomNumberSeed(0);
             var wktest1;
             var wktest2;
             entity.position.getValue(wktest1,wktest2);
-            alert(wktest2.x);
-            wktest2.x = wktest2.x + 1000;
-            alert(wktest2.x);
+            alert(wktest2);
+            //wktest2.x = wktest2.x + 1000;
+            //alert(wktest2.x);
+            
             //Cesium.Cartesian3.fromElements(entity.position.x, entity.position.y, 3000),
             cesiumWidget.entities.add({
                 position : wktest,
