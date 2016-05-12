@@ -129,7 +129,7 @@ Cesium.Math.setRandomNumberSeed(0);
         var entity = entities[i];
         if (entity.billboard != null) {
             //entity.properties.Tester = '991';
-            entities.add({
+            cesiumWidget.entities.add({
                 position : entity.position,
                 point : {
                     pixelSize : 10,
