@@ -19,11 +19,16 @@ dataSource.loadUrl('./Data/population909500.json').then(function() {
     var btn = document.createElement("input");
     for (var i = 0; i < dataSource.seriesNames.length; i++) {
         var seriesName = dataSource.seriesNames[i];
-        btn.id = "button" + seriesName;
-        btn.type = "button";
-        btn.value = seriesName;
-        document.getElementById("controlPanel").appendChild(btn);
-        document.getElementById("button" + seriesName).attachEvent("onclick", createSeriesSetter(seriesName));
+//        btn.id = "button" + seriesName;
+//        btn.type = "button";
+//        btn.value = seriesName;
+//        document.getElementById("controlPanel").appendChild(btn);
+//        document.getElementById("button" + seriesName).attachEvent("onclick", createSeriesSetter(seriesName));
+        var div_element = document.createElement("div");
+            //div_element.innerHTML = '<hr>Title: <br><input type="text" name="title" size="50" value="ŽŽŒ±•¶Žš—ñ"><br>Contents: <br><textarea name="contents" rows="30" cols="100">ŽŽŒ±\nŽŽŒ±\nŽŽŒ±</textarea>';
+            div_element.innerHTML = '<input id="Button' + seriesName + '" type="button" value="' + seriesName + '" onClick="createSeriesSetter(' + seriesName + ')" />';
+        var parent_object = document.getElementById("controlPanel");
+        parent_object.appendChild(div_element);
     }
 });
 </script>
