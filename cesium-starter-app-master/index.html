@@ -22,15 +22,10 @@ dataSource.loadUrl('./Data/population909500.json').then(function() {
         btn.id = "button" + seriesName;
         btn.type = "button";
         btn.value = seriesName;
-
-//        var div_element = document.createElement("div");
-//            //div_element.innerHTML = '<hr>Title: <br><input type="text" name="title" size="50" value="ŽŽŒ±•¶Žš—ñ"><br>Contents: <br><textarea name="contents" rows="30" cols="100">ŽŽŒ±\nŽŽŒ±\nŽŽŒ±</textarea>';
-//            div_element.innerHTML = '<input id="Button' + seriesName + '" type="button" value="' + seriesName + '" onClick="createSeriesSetter(' + seriesName + ')" />';
-//        var parent_object = document.getElementById("controlPanel");
-//        parent_object.appendChild(div_element);
-    }
+        alert(seriesName);
         document.getElementById("controlPanel").appendChild(btn);
-        //document.getElementById("button" + seriesName).attachEvent("onclick", createSeriesSetter(seriesName));
+        document.getElementById("button" + seriesName).attachEvent("onclick", createSeriesSetter(seriesName));
+    }
 });
 </script>
   <style>
@@ -64,8 +59,6 @@ dataSource.loadUrl('./Data/population909500.json').then(function() {
   <script src="Source/App2.js"></script>
 
   <div id="controlPanel">
-    width:400px;
-    height:150px;
   </div>
 </body>
 <script>
