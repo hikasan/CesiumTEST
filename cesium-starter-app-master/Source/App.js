@@ -103,7 +103,7 @@ Cesium.Math.setRandomNumberSeed(0);
     });
 */
 
-    var entities = datasource.entities.values;
+    //var entities = datasource.entities.values;
     for (var i = 0; i < entities.length; i++) {
         var entity = entities[i];
         if (entity.billboard != null) {
