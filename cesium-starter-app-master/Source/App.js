@@ -95,10 +95,10 @@ Cesium.Math.setRandomNumberSeed(0);
         position : Cesium.Cartesian3.fromDegrees(140.7, 37.9, 100),
         point : {
             pixelSize : 10,
-            entity.point.pixelSize = 8,
-            entity.point.color = Cesium.Color.TRANSPARENT,
-            entity.point.outlineColor = Cesium.Color.YELLOW,
-            entity.point.outlineWidth = 3
+            pixelSize : 8,
+            color : Cesium.Color.TRANSPARENT,
+            outlineColor : Cesium.Color.YELLOW,
+            outlineWidth : 3
         }
     });
 */
