@@ -120,9 +120,6 @@ Cesium.Math.setRandomNumberSeed(0);
             //Cesium.Cartesian3.fromElements(entity.position.x, entity.position.y, 3000),
             cesiumWidget.entities.add({
                 position : wktest,
-                propertiy : {
-                TestName ; 'ABC'
-                },
                 point : {
                     pixelSize : 10,
                     pixelSize : 8,
