@@ -118,7 +118,7 @@ Cesium.Math.setRandomNumberSeed(0);
             Cesium.Cartesian3.add(entity.position, offsetPosition, heightPosition);
             
             cesiumWidget.entities.add({
-                position : heightPosition,
+                position : entity.position,
                 point : {
                     pixelSize : 10,
                     pixelSize : 8,
