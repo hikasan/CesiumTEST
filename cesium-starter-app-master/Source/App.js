@@ -111,7 +111,7 @@ Cesium.Math.setRandomNumberSeed(0);
         var entity = entities[i];
         if (entity.billboard != null) {
             //var heightPosition = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1 * 10000.0);
-            var heightPosition = Cesium.Cartesian3.clone(entity.position);
+            //var heightPosition = Cesium.Cartesian3.clone(entity.position);
             //heightPosition.z = heightPosition.z + 1000;
             cesiumWidget.entities.add({
                 position : entity.position,
