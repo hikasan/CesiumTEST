@@ -113,9 +113,8 @@ Cesium.Math.setRandomNumberSeed(0);
             //var heightPosition = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1 * 10000.0);
             //var heightPosition = Cesium.Cartesian3.clone(entity.position);
             //heightPosition.z = heightPosition.z + 1000;
-            
-            var heightPosition = entity.position;
-            heightPosition.z = heightPosition.z + 1000;
+            var offset = Cesium.Cartesian3.fromDegrees(0, 0, 1000);
+            var heightPosition = Cesium.Cartesian3.add(entity.position, offset, new Cesium.Cartesian3());
             
             cesiumWidget.entities.add({
                 position : heightPosition,
@@ -127,8 +126,6 @@ Cesium.Math.setRandomNumberSeed(0);
                     outlineWidth : 3
                 }
             });
-
-            heightPosition.z = heightPosition.z - 1000;
 
         }
     }
