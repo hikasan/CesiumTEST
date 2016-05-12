@@ -116,9 +116,9 @@ Cesium.Math.setRandomNumberSeed(0);
             //var offsetPosition = Cesium.Cartesian3.fromDegrees(0, 0, 1000);
             //Cesium.Cartesian3.add(entity.position, offsetPosition, heightPosition);
             var wktest = entity.position;
-            alert(entity.position.x);
+            alert(entity.position);
             entity.position.x = entity.position.x + 1000;
-            alert(entity.position.x);
+            alert(entity.position);
             //Cesium.Cartesian3.fromElements(entity.position.x, entity.position.y, 3000),
             cesiumWidget.entities.add({
                 position : wktest,
