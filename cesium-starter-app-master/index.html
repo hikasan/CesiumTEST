@@ -11,18 +11,19 @@
 function makeButtonCtrl (){
 var dataSource = new WebGLGlobeDataSource();
 dataSource.loadUrl('./Data/population909500.json').then(function() {
+    alert('1');
     function createSeriesSetter(seriesName) {
         return function() {
             dataSource.seriesToDisplay = seriesName;
         };
     }
+    alert(dataSource.seriesNames);
     for (var i = 0; i < dataSource.seriesNames.length; i++) {
         var seriesName = dataSource.seriesNames[i];
         var btn = document.createElement("input");
         btn.id = "button" + seriesName;
         btn.type = "button";
         btn.value = seriesName;
-        alert(seriesName);
         document.getElementById("controlPanel").appendChild(btn);
         document.getElementById("button" + seriesName).attachEvent("onclick", createSeriesSetter(seriesName));
     }
