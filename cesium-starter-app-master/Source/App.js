@@ -119,9 +119,11 @@ Cesium.Math.setRandomNumberSeed(0);
             //cesiumWidget.entities.add({
             entities.add({
                 position : entity.position,
+/*
                 Property :{
                    Tester : 'AAA'
                 },
+*/
                 point : {
                     pixelSize : 10,
                     pixelSize : 8,
