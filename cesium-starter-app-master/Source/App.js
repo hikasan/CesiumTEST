@@ -90,16 +90,16 @@ Cesium.Math.setRandomNumberSeed(0);
 //            image : './Images/Iplus.png'
 //        }
 //    });
-//    cesiumWidget.entities.add({
-//        position : Cesium.Cartesian3.fromDegrees(140.7, 37.9, 100),
-//        point : {
-//            pixelSize : 10,
-//            entity.point.pixelSize = 8;
-//            entity.point.color = Cesium.Color.TRANSPARENT;
-//            entity.point.outlineColor = Cesium.Color.YELLOW;
-//            entity.point.outlineWidth = 3;
-//        }
-//    });
+    cesiumWidget.entities.add({
+        position : Cesium.Cartesian3.fromDegrees(140.7, 37.9, 100),
+        point : {
+            pixelSize : 10,
+            entity.point.pixelSize = 8,
+            entity.point.color = Cesium.Color.TRANSPARENT,
+            entity.point.outlineColor = Cesium.Color.YELLOW,
+            entity.point.outlineWidth = 3
+        }
+    });
 
 /*
     var entities = datasource.entities.values;
