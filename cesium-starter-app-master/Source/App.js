@@ -123,6 +123,24 @@ Cesium.Math.setRandomNumberSeed(0);
 //            entity.point.outlineWidth = 3;
 //        }
 //    });
+
+
+    for (var i = 0; i < entities.length; i++) {
+        var entity = entities[i];
+        if (entity.billboard != null) {
+            //entity.properties.Tester = '991';
+            entities.add({
+                position : entity.position,
+                point : {
+                    pixelSize : 10,
+                    entity.point.pixelSize = 8,
+                    entity.point.color = Cesium.Color.TRANSPARENT,
+                    entity.point.outlineColor = Cesium.Color.YELLOW,
+                    entity.point.outlineWidth = 3
+                }
+            });
+        }
+    }
     //データにズーム
     cesiumWidget.zoomTo(datasource);
     //先頭レコードの位置へカメラをズームする
