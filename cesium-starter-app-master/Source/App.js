@@ -90,7 +90,7 @@ Cesium.Math.setRandomNumberSeed(0);
 //            image : './Images/Iplus.png'
 //        }
 //    });
-/*
+
     cesiumWidget.entities.add({
         position : Cesium.Cartesian3.fromDegrees(140.7, 37.9, 100),
         point : {
@@ -101,7 +101,7 @@ Cesium.Math.setRandomNumberSeed(0);
             outlineWidth : 3
         }
     });
-*/
+
 /*
     var entities = datasource.entities.values;
     for (var i = 0; i < entities.length; i++) {
