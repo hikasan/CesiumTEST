@@ -111,7 +111,7 @@ Cesium.Math.setRandomNumberSeed(0);
     for (var i = 0; i < entities.length; i++) {
         var entity = entities[i];
         if (entity.billboard != null) {
-            entity.properties.add('Tester')
+            //entity.properties.add('Tester')
             //entity.properties.Tester = '991';
             //var heightPosition = Cesium.Cartesian3.fromDegrees(entity.position.x, entity.position.y, 1 * 10000.0);
             //var heightPosition = entity.position.clone();
@@ -119,10 +119,10 @@ Cesium.Math.setRandomNumberSeed(0);
             //cesiumWidget.entities.add({
             entities.add({
                 position : entity.position,
-/*                Property :{
+                Property :{
                    Tester : 'AAA'
                 },
-*/                point : {
+                point : {
                     pixelSize : 10,
                     pixelSize : 8,
                     color : Cesium.Color.TRANSPARENT,
