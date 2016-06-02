@@ -54,11 +54,11 @@ Cesium.Math.setRandomNumberSeed(0);
 	        entity.polygon.material = Cesium.Color.fromHsl((0.6 - ((entity.properties.AverageValue - MinValue) / (MaxValue - MinValue) * 0.5)), 1.0, 0.5);
 	        entity.polygon.outline = false;
 	        //entity.polygon.extrudedHeight = entity.properties.AverageValue * 10.0;
-	        entity.polygon.extrudedHeight = (entity.properties.AverageValue - MinValue) / (MaxValue - MinValue) * 1000.0;
+	        entity.polygon.extrudedHeight = (entity.properties.AverageValue - MinValue) / (MaxValue - MinValue) * 1000.0 + 3000.0;
         }
         if (entity.polyline != null) {
 	        entity.polyline.material = Cesium.Color.BLUE;
-	        //entity.corridor.extrudedHeight = entity.properties.AverageValue * 1000.0 + 3000;
+	        //entity.corridor.extrudedHeight = entity.properties.AverageValue * 1000.0 + 3000.0;
         }
         
     }
