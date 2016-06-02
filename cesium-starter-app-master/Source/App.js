@@ -35,10 +35,11 @@ Cesium.Math.setRandomNumberSeed(0);
         MaxValue = MinValue + 1;
     }
 
-    var colorHash = {};
+    //var colorHash = {};
     for (var i = 0; i < entities.length; i++) {
         var entity = entities[i];
         var name = entity.name;
+/*
         var color = colorHash[name];
         if (!color) {
             color = Cesium.Color.fromRandom({
@@ -46,6 +47,7 @@ Cesium.Math.setRandomNumberSeed(0);
             });
             colorHash[name] = color;
         }
+*/
         if (entity.polygon != null) {
 	        //entity.polygon.material = color;
 	        entity.polygon.material = Cesium.Color.fromHsl((0.6 - ((entity.properties.AverageValue - MinValue) / (MaxValue - MinValue) * 0.5)), 1.0, 0.5);
