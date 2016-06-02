@@ -16,24 +16,25 @@ Cesium.Math.setRandomNumberSeed(0);
     
     var entities = datasource.entities.values;
     
-/*
     var MaxValue = 0;
     var MinValue = Number.MAX_VALUE;
     for (var i = 0; i < entities.length; i++) {
         var entity = entities[i];
-        if (entity.properties.AverageValue != null) {
-            if (MaxValue < entity.properties.AverageValue) {
-                MaxValue = entity.properties.AverageValue;
-            }
-            if (MinValue > entity.properties.AverageValue) {
-                MinValue = entity.properties.AverageValue;
+        if (entity.polygon != null) {
+            if (entity.properties.AverageValue != null) {
+                if (MaxValue < entity.properties.AverageValue) {
+                    MaxValue = entity.properties.AverageValue;
+               }
+                if (MinValue > entity.properties.AverageValue) {
+                    MinValue = entity.properties.AverageValue;
+                }
             }
         }
     }
     if ((MaxValue - MinValue) = 0){
         MaxValue = MinValue + 1;
     }
-*/
+
     var colorHash = {};
     for (var i = 0; i < entities.length; i++) {
         var entity = entities[i];
