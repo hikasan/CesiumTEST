@@ -53,8 +53,6 @@ Cesium.Math.setRandomNumberSeed(0);
 
 
     cesiumWidget.dataSources.add(datasource);
-    });
-*/
 
 
     for (var i = 0; i < entities.length; i++) {
