@@ -16,6 +16,22 @@ Cesium.Math.setRandomNumberSeed(0);
     
     var entities = datasource.entities.values;
     
+    var MaxValue = 0;
+    var MinValue = 0;
+    for (var i = 0; i < entities.length; i++) {
+        var entity = entities[i];
+        if (entity.properties.AverageValue != null) {
+            if (MaxValue > entity.properties.AverageValue) {
+                MaxValue = entity.properties.AverageValue;
+            }
+            if (MinValue < entity.properties.AverageValue) {
+                MinValue = entity.properties.AverageValue;
+            }
+        }
+    }
+    if ((MaxValue - MinValue) = 0){
+        MaxValue = MinValue + 1;
+    }
     var colorHash = {};
     for (var i = 0; i < entities.length; i++) {
         var entity = entities[i];
@@ -29,52 +45,10 @@ Cesium.Math.setRandomNumberSeed(0);
         }
         if (entity.polygon != null) {
 	        entity.polygon.material = color;
-	        //entity.polygon.material = Cesium.Color.fromHsl((0.6 - (entity.properties.AverageValue * 100.0 * 0.5)), 1.0, 0.5);
+	        //entity.polygon.material = Cesium.Color.fromHsl((0.6 - ((entity.properties.AverageValue - MinValue) / (MaxValue - MinValue) * 0.5)), 1.0, 0.5);
 	        entity.polygon.outline = false;
 	        entity.polygon.extrudedHeight = entity.properties.AverageValue * 10.0;
 	        entity.properties.CityName ='xxx';
-        }
-        if (entity.parent != null) {
-            entity.properties.Tester = '990';
-        }
-        if (entity.billboard != null) {
-            entity.properties.Tester = '991';
-        }
-        if (entity.box != null) {
-            entity.properties.Tester = '992';
-        }
-        if (entity.corridor != null) {
-            entity.properties.Tester = '993';
-        }
-        if (entity.cylinder != null) {
-            entity.properties.Tester = '994';
-        }
-        if (entity.ellipse != null) {
-            entity.properties.Tester = '995';
-        }
-        if (entity.ellipsoid != null) {
-            entity.properties.Tester = '996';
-        }
-        if (entity.label != null) {
-            entity.properties.Tester = '997';
-        }
-        if (entity.model != null) {
-            entity.properties.Tester = '998';
-        }
-        if (entity.path != null) {
-            entity.properties.Tester = '999';
-        }
-        if (entity.point != null) {
-            entity.properties.Tester = 'xxx';
-        }
-        if (entity.polylineVolume != null) {
-            entity.properties.Tester = 'xx';
-        }
-        if (entity.rectangle != null) {
-            entity.properties.Tester = 'x';
-        }
-        if (entity.wall != null) {
-            entity.properties.Tester = 'qqq';
         }
         if (entity.polyline != null) {
 	        entity.polyline.material = Cesium.Color.BLUE;
