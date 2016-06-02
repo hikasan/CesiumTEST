@@ -29,9 +29,9 @@ Cesium.Math.setRandomNumberSeed(0);
         }
         if (entity.polygon != null) {
 	        entity.polygon.material = color;
-	        //entity.polygon.material = Cesium.Color.fromHsl((0.6 - (entity.properties.AverageValue * 100000.0 * 0.5)), 1.0, 0.5);
+	        //entity.polygon.material = Cesium.Color.fromHsl((0.6 - (entity.properties.AverageValue * 1000.0 * 0.5)), 1.0, 0.5);
 	        entity.polygon.outline = false;
-	        entity.polygon.extrudedHeight = entity.properties.AverageValue * 10000.0;
+	        entity.polygon.extrudedHeight = entity.properties.AverageValue * 100.0;
 	        entity.properties.CityName ='xxx';
         }
         if (entity.parent != null) {
