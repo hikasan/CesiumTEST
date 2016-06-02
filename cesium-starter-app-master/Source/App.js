@@ -31,7 +31,7 @@ Cesium.Math.setRandomNumberSeed(0);
             }
         }
     }
-    if ((MaxValue - MinValue) = 0){
+    if ((MaxValue - MinValue) == 0){
         MaxValue = MinValue + 1;
     }
 
@@ -47,8 +47,8 @@ Cesium.Math.setRandomNumberSeed(0);
             colorHash[name] = color;
         }
         if (entity.polygon != null) {
-	        entity.polygon.material = color;
-	        //entity.polygon.material = Cesium.Color.fromHsl((0.6 - ((entity.properties.AverageValue - MinValue) / (MaxValue - MinValue) * 0.5)), 1.0, 0.5);
+	        //entity.polygon.material = color;
+	        entity.polygon.material = Cesium.Color.fromHsl((0.6 - ((entity.properties.AverageValue - MinValue) / (MaxValue - MinValue) * 0.5)), 1.0, 0.5);
 	        entity.polygon.outline = false;
 	        entity.polygon.extrudedHeight = entity.properties.AverageValue * 10.0;
         }
