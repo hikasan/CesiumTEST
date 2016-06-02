@@ -35,22 +35,10 @@ Cesium.Math.setRandomNumberSeed(0);
         MaxValue = MinValue + 1;
     }
 
-    //var colorHash = {};
     for (var i = 0; i < entities.length; i++) {
         var entity = entities[i];
         var name = entity.name;
-/*
-        var color = colorHash[name];
-        if (!color) {
-            color = Cesium.Color.fromRandom({
-                alpha : 1.0
-            });
-            colorHash[name] = color;
-        }
-*/
         if (entity.polygon != null) {
-	        //entity.polygon.material = color;
-	        //entity.polygon.material = Cesium.Color.fromHsl((0.6 - ((entity.properties.AverageValue - MinValue) / (MaxValue - MinValue) * 0.5)), 1.0, 0.5);
 	        entity.polygon.material = Cesium.Color.fromHsl((0.6 - ((entity.properties.AverageValue - MinValue) / (MaxValue - MinValue) * 0.5)), 1.0, 0.5);
 	        entity.polygon.outline = false;
 	        //entity.polygon.extrudedHeight = entity.properties.AverageValue * 10.0;
@@ -65,24 +53,6 @@ Cesium.Math.setRandomNumberSeed(0);
 
 
     cesiumWidget.dataSources.add(datasource);
-//    cesiumWidget.entities.add({
-//        position : Cesium.Cartesian3.fromDegrees(140.77237129211426, 37.97918331477581,1000),
-//        billboard : {
-//            image : './Images/Iplus.png'
-//        }
-//    });
-/*
-//    cesiumWidget.entities.add({
-      entities.add({
-//        position : Cesium.Cartesian3.fromDegrees(140.7, 37.9, 100),
-        position : Cesium.Cartesian3.fromDegrees(140.7, 37.9, 100),
-        point : {
-            pixelSize : 10,
-            pixelSize : 8,
-            color : Cesium.Color.TRANSPARENT,
-            outlineColor : Cesium.Color.YELLOW,
-            outlineWidth : 3
-        }
     });
 */
 
